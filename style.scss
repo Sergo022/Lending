@@ -1,0 +1,189 @@
+*,
+ *::before,
+*::after {
+padding: 0;
+margin: 0;
+border: 0;
+box-sizing: border-box;
+}
+a {
+text-decoration: none;
+}
+ul,
+ol,
+li {
+list-style: none;
+}
+img {
+vertical-align: top;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+font-weight: inherit;
+font-size: inherit;
+}
+html,
+body {
+height: 100%;
+}
+body {
+line-height: 1;
+color: #333333;
+}
+ .wrapper{
+min-height: 100%;
+overflow: hidden;
+display: flex;
+flex-direction: column;
+}
+[class*=_container]{
+max-width: 1139px;
+margin: 0 auto;
+padding: 0 15px;
+}
+/* @media (max-width: 1390.98px){
+[class*=_container]{
+max-width: 970px;
+}
+}
+@media (max-width: 990.98px){
+[class*=_container]{
+max-width: 750px;
+}
+}
+@media (max-width: 767.98px){
+[class*=_container]{
+max-width: none;
+padding: 0 15px;
+}
+} */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Ubuntu:wght@300&display=swap');
+.footer_tt{
+    font-family: 'Poppins';
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #DA1414; 
+    margin-bottom: 10px;
+}
+.footer {
+    padding: 50px 0;
+    background-color: white;
+    .footer_container {
+        display: flex;
+        gap: 10px;
+        justify-content: space-between;
+        @media (max-width:700px) {
+            gap: 30px;
+        }
+        .footer_social {
+            margin-right: 41px;
+            @media (max-width:720px) {
+                margin-right: 0;
+            }
+            .socisl_title{
+                font-family: 'Poppins';
+                font-weight: 500;
+                font-size: 24px;
+                line-height: 36px;
+                color: #DA1414;
+                text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            }
+            .social_subtitle {
+                margin-bottom: 20px;
+                font-family: 'Ubuntu';
+                font-weight: 300;
+                font-size: 12px;
+                line-height: 16px;
+                color: #9F9F9F;
+            }
+            .socisl_items {
+                display: flex;
+                gap: 15px;
+            }
+            .social_item {
+            }
+        }
+        .footer_list{
+            display: flex;
+            gap: 30px;
+
+            .footer_seasons {
+                margin-right: 93px;
+                @media (max-width:700px) {
+                        margin-right: 63px;
+                }
+            ul{
+                li{
+                    font-family: 'Poppins';
+                    font-weight: 400;
+                    font-size: 12px;
+                    line-height: 18px;
+                    color: #404156;
+                }
+                li:not(:last-child){
+                    margin-bottom: 10px;
+                }
+            }
+            }
+            .footer_genres {
+                margin-right: 93px; 
+                @media (max-width:700px) {
+                        margin-right: 63px;
+                }
+                ul{
+                    li{
+                        font-family: 'Poppins';
+                        font-weight: 400;
+                        font-size: 12px;
+                        line-height: 18px;
+                        color: #404156;
+                    }
+                    li:not(:last-child){
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+        }
+
+        .footer_about{
+            max-width: 349px;
+            .about_text{
+                font-family: 'Poppins';
+                font-weight: 400;
+                font-size: 12px;
+                line-height: 18px;
+                color: #404156;
+            }
+        }
+        .button_up {
+            padding: 15px 12px;
+            background-color: #DA1414;
+            border-radius: 10px;
+            height: 40px;
+            width: 40px;
+        }
+    }
+}
+@media (max-width:880px) {
+    .footer_about{
+                display: none;
+    }
+}
+@media (max-width:570px) {
+    .footer_container{
+                position: relative;
+                gap: 30px;
+                flex-direction: column;
+            }
+            .button_up{
+                position: absolute;
+                top: 0;
+                right: 15px;
+            }
+}
