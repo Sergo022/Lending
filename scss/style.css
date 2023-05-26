@@ -81,13 +81,18 @@ body {
 }
 
 .top_items {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
   gap: 30px;
 }
 .top_items .top_item {
   position: relative;
   display: inline-block;
+}
+.top_items .top_item img {
+  width: 100%;
+  display: block;
+  height: auto;
 }
 
 .card_info {
@@ -188,6 +193,9 @@ body {
     align-items: center;
     flex-direction: column;
   }
+  .active .header .header_container .mb_burger {
+    left: 0;
+  }
 }
 .header .header_container .mb_burger nav ul {
   display: flex;
@@ -254,16 +262,8 @@ body {
   }
 }
 
-@media (max-width: 1073px) {
-  .active .mb_burger {
-    left: 0;
-  }
-}
 .main {
   margin-top: 50px;
-}
-.main .main_container {
-  display: flex;
 }
 .main .main_container .main_content {
   max-width: 825px;

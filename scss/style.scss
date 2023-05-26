@@ -70,12 +70,17 @@ body{
 }
 // ========================CARD====================================================
 .top_items{
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(225px ,1fr));
     gap: 30px;
     .top_item{
         position: relative;
         display: inline-block;
+        img{
+            width: 100%;
+            display: block;
+            height: auto;
+        }
     }
 }
 
@@ -164,6 +169,9 @@ body{
                     text-align: center;
                     align-items: center;
                     flex-direction: column;
+                    .active &{
+                        left: 0;
+                    }
                     
             }
             display: flex;
@@ -238,11 +246,7 @@ body{
         }
     }
 }
-@media (max-width:1073px) {
-    .active .mb_burger{
-        left: 0;
-    }
-}
+
 
 
 
@@ -250,7 +254,6 @@ body{
 .main {
     margin-top: 50px;
     .main_container {
-        display: flex;
         .main_content {
             max-width: 825px;
             .main_seasons {

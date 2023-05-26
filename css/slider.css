@@ -126,6 +126,7 @@ Auto Height
   display: inline-block;
 }
 .swiper-slide img {
-  width: 100%;
-  height: auto;
+    width: 100%;
+    display: block;
+    height: auto;
 }
