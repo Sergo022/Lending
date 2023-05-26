@@ -36,16 +36,5 @@ new Swiper('.swiper-container',{
     slidesPerView: 3,
     spaceBetween: 30,
 });
-// $('.slaider').slick(
-//     {
-//         // autoplay: true,
-//         // autoplaySpeed: 2000,    
-//      appendArrows:$('.arrow'),
-//      nextArrow:'<span class="next_aroov"><img src="img/img/back copy 2.svg" alt=""></span>',
-//      prevArrow:'<span class="prev_aroov"><img src="img/img/back copy 2.svg" alt=""></span>',
-    
-// });
-// $(".slaider").on('afterChange', function(event, slick, currentSlide){
-//     $("#cp").text(currentSlide + 01);
-//  });
+
 

@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/> -->
     
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="slider.css">
+    <link rel="stylesheet" href="scss/style.css">
+    <link rel="stylesheet" href="css/slider.css">
     <title>Document</title>
 </head>
 <body>
@@ -60,7 +60,7 @@
                         <div class="swiper-slide">
                             <img src="img/anime-1.jpg" alt="">
                             <div class="card_info">
-                                <div class="card_status">
+                                <div class="card_status viewed">
                                     <h3>Viewed</h3>
                                 </div>
                                 <div class="card_description">
@@ -74,9 +74,41 @@
                             </div>
                         </div>
                         <div class="swiper-slide">
+                            <img src="img/anime-2.jpg" alt="">
+                            <div class="card_info">
+                                <div class="card_status watching">
+                                    <h3>I'm watching</h3>
+                                </div>
+                                <div class="card_description">
+                                    <h2>Kenja no Mago</h2>
+                                    <p>Adventure, Comedy, Fantasy</p>
+                                </div>
+                            </div>
+                            <div class="catd_rating">
+                                <img src="img/icon/Star.svg" alt="">
+                                <p>9.7</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/anime-3.jpg" alt="">
+                            <div class="card_info">
+                                <div class="card_status thrown">
+                                    <h3>Thrown</h3>
+                                </div>
+                                <div class="card_description">
+                                    <h2>Boruto: Naruto Next...</h2>
+                                    <p>Comedy, Romance, School Life</p>
+                                </div>
+                            </div>
+                            <div class="catd_rating">
+                                <img src="img/icon/Star.svg" alt="">
+                                <p>9.7</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
                             <img src="img/anime-1.jpg" alt="">
                             <div class="card_info">
-                                <div class="card_status">
+                                <div class="card_status viewed">
                                     <h3>Viewed</h3>
                                 </div>
                                 <div class="card_description">
@@ -90,46 +122,14 @@
                             </div>
                         </div>
                         <div class="swiper-slide">
-                            <img src="img/anime-1.jpg" alt="">
+                            <img src="img/anime-2.jpg" alt="">
                             <div class="card_info">
-                                <div class="card_status">
-                                    <h3>Viewed</h3>
+                                <div class="card_status watching">
+                                    <h3>I'm watching</h3>
                                 </div>
                                 <div class="card_description">
-                                    <h2>Sono Bisque Doll wa Koi...</h2>
-                                    <p>Comedy, Romance, School Life</p>
-                                </div>
-                            </div>
-                            <div class="catd_rating">
-                                <img src="img/icon/Star.svg" alt="">
-                                <p>9.7</p>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="img/anime-1.jpg" alt="">
-                            <div class="card_info">
-                                <div class="card_status">
-                                    <h3>Viewed</h3>
-                                </div>
-                                <div class="card_description">
-                                    <h2>Sono Bisque Doll wa Koi...</h2>
-                                    <p>Comedy, Romance, School Life</p>
-                                </div>
-                            </div>
-                            <div class="catd_rating">
-                                <img src="img/icon/Star.svg" alt="">
-                                <p>9.7</p>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="img/anime-1.jpg" alt="">
-                            <div class="card_info">
-                                <div class="card_status">
-                                    <h3>Viewed</h3>
-                                </div>
-                                <div class="card_description">
-                                    <h2>Sono Bisque Doll wa Koi...</h2>
-                                    <p>Comedy, Romance, School Life</p>
+                                    <h2>Kenja no Mago</h2>
+                                    <p>Adventure, Comedy, Fantasy</p>
                                 </div>
                             </div>
                             <div class="catd_rating">
@@ -140,7 +140,94 @@
                     </div>
                 </div>
             </div>
-            <div class="main_top"></div>
+            <div class="main_top">
+                <div class="top_header">
+                        <img src="img/icon/galery.svg" alt="">
+                        <h2>Top 100</h2>
+                </div>
+                <div class="top_items">
+                    <div class="top_item">
+                        <img src="img/anime-1.jpg" alt="">
+                        <div class="card_info">
+                            <div class="card_status viewed">
+                                <h3>Viewed</h3>
+                            </div>
+                            <div class="card_description">
+                                <h2>Sono Bisque Doll wa Koi...</h2>
+                                <p>Comedy, Romance, School Life</p>
+                            </div>
+                        </div>
+                        <div class="catd_rating">
+                            <img src="img/icon/Star.svg" alt="">
+                            <p>9.7</p>
+                        </div>
+                    </div>
+                    <div class="top_item">
+                        <img src="img/anime-2.jpg" alt="">
+                        <div class="card_info">
+                            <div class="card_status watching">
+                                <h3>I'm watching</h3>
+                            </div>
+                            <div class="card_description">
+                                <h2>Kenja no Mago</h2>
+                                <p>Adventure, Comedy, Fantasy</p>
+                            </div>
+                        </div>
+                        <div class="catd_rating">
+                            <img src="img/icon/Star.svg" alt="">
+                            <p>9.7</p>
+                        </div>
+                    </div>
+                    <div class="top_item">
+                        <img src="img/anime-3.jpg" alt="">
+                        <div class="card_info">
+                            <div class="card_status thrown">
+                                <h3>Thrown</h3>
+                            </div>
+                            <div class="card_description">
+                                <h2>Boruto: Naruto Next...</h2>
+                                <p>Comedy, Romance, School Life</p>
+                            </div>
+                        </div>
+                        <div class="catd_rating">
+                            <img src="img/icon/Star.svg" alt="">
+                            <p>9.7</p>
+                        </div>
+                    </div>
+                    <div class="top_item">
+                        <img src="img/anime-1.jpg" alt="">
+                        <div class="card_info">
+                            <div class="card_status viewed">
+                                <h3>Viewed</h3>
+                            </div>
+                            <div class="card_description">
+                                <h2>Sono Bisque Doll wa Koi...</h2>
+                                <p>Comedy, Romance, School Life</p>
+                            </div>
+                        </div>
+                        <div class="catd_rating">
+                            <img src="img/icon/Star.svg" alt="">
+                            <p>9.7</p>
+                        </div>
+                    </div>
+                    <div class="top_item">
+                        <img src="img/anime-2.jpg" alt="">
+                        <div class="card_info">
+                            <div class="card_status watching">
+                                <h3>I'm watching</h3>
+                            </div>
+                            <div class="card_description">
+                                <h2>Kenja no Mago</h2>
+                                <p>Adventure, Comedy, Fantasy</p>
+                            </div>
+                        </div>
+                        <div class="catd_rating">
+                            <img src="img/icon/Star.svg" alt="">
+                            <p>9.7</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <button class="main_mo_btn">Load More</button>
         </div>
         <div class="main_sidebar">
