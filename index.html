@@ -4,13 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/> -->
     
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="slider.css">
     <title>Document</title>
 </head>
 <body>
 <div class="wrapper">
-<!-- <header class="header">
+<header class="header">
     <div class="header_container">
         <a href="" class="header_logo">Animenia</a>
         <div class="mb_burger">
@@ -38,26 +40,122 @@
             <img class="category" src="img/icon/Category.svg" alt="">
         </div>
     </div>
-</header> -->
-<main>
-    <div class="main_card">
-        <img src="img/anime-1.jpg" alt="">
-        <div class="card_info">
-            <div class="card_status">
-                <h3>Viewed</h3>
+</header>
+<main class="main">
+    <div class="main_container">
+        <div class="main_content">
+            <div class="main_seasons">
+                <div class="seasons_header">
+                    <div class="header_left">
+                        <img src="img/icon/galery.svg" alt="">
+                        <h2>Spring Season</h2>
+                    </div>
+                    <div class="navigation">
+                        <div class="swiper-button-prev"><img src="img/icon/Arrow - Left.svg" alt=""></div>
+                        <div class="swiper-button-next"><img src="img/icon/Arrow - Right.svg" alt=""></div>
+                    </div>
+                </div>
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="img/anime-1.jpg" alt="">
+                            <div class="card_info">
+                                <div class="card_status">
+                                    <h3>Viewed</h3>
+                                </div>
+                                <div class="card_description">
+                                    <h2>Sono Bisque Doll wa Koi...</h2>
+                                    <p>Comedy, Romance, School Life</p>
+                                </div>
+                            </div>
+                            <div class="catd_rating">
+                                <img src="img/icon/Star.svg" alt="">
+                                <p>9.7</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/anime-1.jpg" alt="">
+                            <div class="card_info">
+                                <div class="card_status">
+                                    <h3>Viewed</h3>
+                                </div>
+                                <div class="card_description">
+                                    <h2>Sono Bisque Doll wa Koi...</h2>
+                                    <p>Comedy, Romance, School Life</p>
+                                </div>
+                            </div>
+                            <div class="catd_rating">
+                                <img src="img/icon/Star.svg" alt="">
+                                <p>9.7</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/anime-1.jpg" alt="">
+                            <div class="card_info">
+                                <div class="card_status">
+                                    <h3>Viewed</h3>
+                                </div>
+                                <div class="card_description">
+                                    <h2>Sono Bisque Doll wa Koi...</h2>
+                                    <p>Comedy, Romance, School Life</p>
+                                </div>
+                            </div>
+                            <div class="catd_rating">
+                                <img src="img/icon/Star.svg" alt="">
+                                <p>9.7</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/anime-1.jpg" alt="">
+                            <div class="card_info">
+                                <div class="card_status">
+                                    <h3>Viewed</h3>
+                                </div>
+                                <div class="card_description">
+                                    <h2>Sono Bisque Doll wa Koi...</h2>
+                                    <p>Comedy, Romance, School Life</p>
+                                </div>
+                            </div>
+                            <div class="catd_rating">
+                                <img src="img/icon/Star.svg" alt="">
+                                <p>9.7</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/anime-1.jpg" alt="">
+                            <div class="card_info">
+                                <div class="card_status">
+                                    <h3>Viewed</h3>
+                                </div>
+                                <div class="card_description">
+                                    <h2>Sono Bisque Doll wa Koi...</h2>
+                                    <p>Comedy, Romance, School Life</p>
+                                </div>
+                            </div>
+                            <div class="catd_rating">
+                                <img src="img/icon/Star.svg" alt="">
+                                <p>9.7</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="card_description">
-                <h2>Sono Bisque Doll wa Koi...</h2>
-                <p>Comedy, Romance, School Life</p>
+            <div class="main_top"></div>
+            <button class="main_mo_btn">Load More</button>
+        </div>
+        <div class="main_sidebar">
+            <div class="sidebar_news"></div>
+            <div class="sidebar_reviews"></div>
+            <div class="sidebar_social_btn">
+                <a href="" class="social_btn">Instagram</a>
+                <a href="" class="social_btn">Telegram</a>
+                <a href="" class="social_btn">YouTube</a>
             </div>
         </div>
-        <div class="catd_rating">
-            <img src="img/icon/Star.svg" alt="">
-            <p>9.7</p>
-        </div>
+       
     </div>
 </main>
-<!-- <footer class="footer">
+<footer class="footer">
     <div class="footer_container">
         <div class="footer_social">
             <h2 class="socisl_title">Animenia</h2>
@@ -100,8 +198,9 @@
         </div>
         <button class="button_up"><img src="img/icon/up.svg" alt=""></button>
     </div>
-</footer> -->
+</footer>
 </div>
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 <script src="main.js"></script>
 </body>
 </html>
