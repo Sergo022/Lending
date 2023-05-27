@@ -254,22 +254,53 @@ body{
 .main {
     margin-top: 50px;
     .main_container {
-        .main_content {
-            max-width: 825px;
-            .main_seasons {
-                .swiper-slide{
-                   
-                }
-                .seasons_header {
-                    background: #FFFFFF;
-                    box-shadow: 0px 4px 4px rgba(230, 230, 230, 0.25);
-                    border-radius: 10px;
-                    padding: 18px 20px;
-                    display: flex;
-                    justify-content: space-between;
-                    margin-bottom: 20px;
-                    .header_left{
+        .main_full{
+            display: flex;
+            gap: 30px;
+            .main_content {
+                max-width: 74.3%;
+                .main_seasons {
+                    .swiper-slide{
+                    
+                    }
+                    .seasons_header {
+                        background: #FFFFFF;
+                        box-shadow: 0px 4px 4px rgba(230, 230, 230, 0.25);
+                        border-radius: 10px;
+                        padding: 18px 20px;
                         display: flex;
+                        justify-content: space-between;
+                        margin-bottom: 20px;
+                        .header_left{
+                            display: flex;
+                            gap: 10px;
+                            align-items: center;
+                            img{
+                                padding: 6.5px;
+                                background: #DA1414;
+                                border-radius: 5px;
+                            }
+                            h2{
+                                font-family: 'Poppins';
+                                font-weight: 500;
+                                font-size: 18px;
+                                line-height: 135%;
+                                color: #DA1414;
+                            }
+                        
+                        }
+                    }
+                }
+                .main_top{
+                    margin-top: 50px;
+                    margin-bottom: 32px;
+                    .top_header{
+                        background: #FFFFFF;
+                        box-shadow: 0px 4px 4px rgba(230, 230, 230, 0.25);
+                        border-radius: 10px;
+                        padding: 18px 20px;
+                        display: flex;
+                        margin-bottom: 20px;
                         gap: 10px;
                         align-items: center;
                         img{
@@ -284,59 +315,195 @@ body{
                             line-height: 135%;
                             color: #DA1414;
                         }
-                    
                     }
                 }
-            }
-            .main_top{
-                margin-top: 50px;
-                margin-bottom: 32px;
-                .top_header{
-                    background: #FFFFFF;
+                .main_mo_btn{
+                    width: 100%;
+                    background: #FAFAFA;
                     box-shadow: 0px 4px 4px rgba(230, 230, 230, 0.25);
                     border-radius: 10px;
-                    padding: 18px 20px;
-                    display: flex;
-                    margin-bottom: 20px;
-                    gap: 10px;
-                    align-items: center;
-                    img{
-                        padding: 6.5px;
-                        background: #DA1414;
-                        border-radius: 5px;
+                    color: #DA1414;
+                    font-family: 'Poppins';
+                    font-weight: 500;
+                    font-size: 18px;
+                    line-height: 135%;
+                    text-align: center;
+                    padding: 20px 0;
+                    cursor: pointer;
+                }
+            }
+            .main_sidebar {
+                width: 100%;
+                .sidebar_news {
+                    .news_header {
+                        align-items: center;
+                        display: flex;
+                        gap: 10px;
+                        margin-bottom: 20px;
+                        padding: 20px;
+                        background: #FFFFFF;
+                        box-shadow: 0px 4px 4px rgba(230, 230, 230, 0.25);
+                        border-radius: 10px;
+                        img{
+                            background: #DA1414;
+                            border-radius: 5px;
+                            padding: 5px;
+                        }
+                        h3{
+                            font-family: 'Poppins';
+                            font-weight: 500;
+                            font-size: 18px;
+                            line-height: 135%;
+                            color: #DA1414;
+                        }
                     }
-                    h2{
+                    .news_cards {
+                        margin: 0 20px;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 20px;
+                        .card{
+                            .news_card {
+                                &.active .card_title::after{
+                                    transform: rotate(-45deg);
+                                    background-color: red;
+                                }
+                                &.active .card_title::before{
+                                    transform: rotate(45deg);
+                                    background-color: red;
+                                }
+                                &.active h3{
+                                    color: #DA1414; 
+                                }
+                                h3{
+                                    font-family: 'Poppins';
+                                    font-weight: 400;
+                                    font-size: 12px;
+                                    line-height: 135%;
+                                    color: #404156;
+                                     
+                                    position: relative;
+                                    cursor: pointer;
+                                    &::before {
+                                        content: "";
+                                        position: absolute;
+                                        top: 7px;
+                                        right: 0;
+                                        background-color: #404156;
+                                        width: 8px;
+                                        transform: rotate(-45deg);
+                                        height: 1px;
+                                        border-radius: 5px;
+                                         transition: all 0.3s ease 0s;
+                                    }
+                                    &::after{
+                                        content: "";
+                                        position: absolute;
+                                        top: 7px;
+                                        right: 0;
+                                        background-color: #404156;
+                                        width: 8px;
+                                        transform: rotate(45deg);
+                                        height: 1px;
+                                        margin-right: 5px;
+                                        border-radius: 5px;
+                                         transition: all 0.3s ease 0s;
+                                    }
+                                    &.active::after{
+                                        transform: rotate(45deg);
+                                    }
+                                    &.active::before{
+                                        transform: rotate(-45deg);
+                                    }
+                                }
+                                p{
+                                    font-family: 'Poppins';
+                                    font-weight: 400;
+                                    font-size: 10px;
+                                    line-height: 135%;
+                                    color: #9F9F9F;
+                                }
+                                .genre {
+                                    margin-bottom: 5px;
+                                    
+                                }
+                                .date {
+                                    margin-bottom: 5px;
+                                }
+                            }
+                            .card_img{
+                                 width: 100%;
+                                display: none;
+                                height: auto;
+                            }
+                        }
+                       
+                    }
+                }
+                .sidebar_reviews {
+                    .reviews_header {
+                        margin-top: 50px;
+                        align-items: center;
+                        display: flex;
+                        gap: 10px;
+                        margin-bottom: 20px;
+                        padding: 20px;
+                        background: #FFFFFF;
+                        box-shadow: 0px 4px 4px rgba(230, 230, 230, 0.25);
+                        border-radius: 10px;
+                        img{
+                            background: #DA1414;
+                            border-radius: 5px;
+                            padding: 5px;
+                        }
+                        h3{
+                            font-family: 'Poppins';
+                            font-weight: 500;
+                            font-size: 18px;
+                            line-height: 135%;
+                            color: #DA1414;
+                        }
+                    }                  
+                }
+                .sidebar_social_btn {
+                    margin-top: 50px;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                    .social_btn {
                         font-family: 'Poppins';
                         font-weight: 500;
-                        font-size: 18px;
+                        font-size: 16px;
                         line-height: 135%;
-                        color: #DA1414;
+                        text-align: center;
+                        color: #FFFFFF;
+                        padding: 20px 85px;
+                        border-radius: 10px;
+                    }
+                    .inst{
+                        background: linear-gradient(93.38deg, #C000C4 0%, #EE7200 100%), #FAFAFA;                    
+                        box-shadow: 0px 4px 4px rgba(230, 230, 230, 0.25);
+                    }
+                    .teleg{
+                        background: linear-gradient(93.38deg, #97C7FF 0%, #0679FF 100%), #FAFAFA;
+                        box-shadow: 0px 4px 4px rgba(230, 230, 230, 0.25);
+                    }
+                    .youtube{
+                        background: linear-gradient(93.38deg, #DA1414 0%, #9F0000 100%);
+                        box-shadow: 0px 4px 4px rgba(230, 230, 230, 0.25);
                     }
                 }
             }
-            .main_mo_btn{
-                width: 100%;
-                background: #FAFAFA;
-                box-shadow: 0px 4px 4px rgba(230, 230, 230, 0.25);
-                border-radius: 10px;
-                color: #DA1414;
-                font-family: 'Poppins';
-                font-weight: 500;
-                font-size: 18px;
-                line-height: 135%;
-                text-align: center;
-                padding: 20px 0;
-                cursor: pointer;
-            }
-        }
-        .main_sidebar {
-            .sidebar_news {
-            }
-            .sidebar_reviews {
-            }
+           
+            
+           
+            
+            
+            
+            
             .sidebar_social_btn {
-                .social_btn {
-                }
+            }
+            .social_btn {
             }
         }
     }
