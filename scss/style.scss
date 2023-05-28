@@ -257,8 +257,14 @@ body{
         .main_full{
             display: flex;
             gap: 30px;
+            @media (max-width:940px) {
+                   display: block;
+           }
             .main_content {
                 max-width: 74.3%;
+                @media (max-width:940px) {
+                       max-width: 100%;
+               }
                 .main_seasons {
                     .swiper-slide{
                     
@@ -432,6 +438,9 @@ body{
                                 }
                             }
                             .card_img{
+                                @media (max-width:940px) {
+                                    max-width: 100px;
+                                }
                                  width: 100%;
                                 display: none;
                                 height: auto;
@@ -477,7 +486,7 @@ body{
                         line-height: 135%;
                         text-align: center;
                         color: #FFFFFF;
-                        padding: 20px 85px;
+                        padding: 20px 0;
                         border-radius: 10px;
                     }
                     .inst{
@@ -510,7 +519,14 @@ body{
 }
 
 
-
+@media (max-width:940px) {
+     .card {
+        display: flex;
+    }   
+    .news_card {
+        display: flex;
+    }
+}
 
 
 

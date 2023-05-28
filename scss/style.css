@@ -269,8 +269,18 @@ body {
   display: flex;
   gap: 30px;
 }
+@media (max-width: 940px) {
+  .main .main_container .main_full {
+    display: block;
+  }
+}
 .main .main_container .main_full .main_content {
   max-width: 74.3%;
+}
+@media (max-width: 940px) {
+  .main .main_container .main_full .main_content {
+    max-width: 100%;
+  }
 }
 .main .main_container .main_full .main_content .main_seasons .seasons_header {
   background: #FFFFFF;
@@ -438,6 +448,11 @@ body {
   display: none;
   height: auto;
 }
+@media (max-width: 940px) {
+  .main .main_container .main_full .main_sidebar .sidebar_news .news_cards .card .card_img {
+    max-width: 100px;
+  }
+}
 .main .main_container .main_full .main_sidebar .sidebar_reviews .reviews_header {
   margin-top: 50px;
   align-items: center;
@@ -474,7 +489,7 @@ body {
   line-height: 135%;
   text-align: center;
   color: #FFFFFF;
-  padding: 20px 85px;
+  padding: 20px 0;
   border-radius: 10px;
 }
 .main .main_container .main_full .main_sidebar .sidebar_social_btn .inst {
@@ -488,6 +503,14 @@ body {
 .main .main_container .main_full .main_sidebar .sidebar_social_btn .youtube {
   background: linear-gradient(93.38deg, #DA1414 0%, #9F0000 100%);
   box-shadow: 0px 4px 4px rgba(230, 230, 230, 0.25);
+}
+@media (max-width: 940px) {
+  .card {
+    display: flex;
+  }
+  .news_card {
+    display: flex;
+  }
 }
 .footer {
   padding: 50px 0;
