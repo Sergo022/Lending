@@ -5,353 +5,71 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="scss/style.css">
-    <link rel="stylesheet" href="css/slider.css">
     <title>Document</title>
 </head>
 <body>
-<div class="wrapper">
-<header class="header">
-    <div class="header_container">
-        <a href="" class="header_logo">
-            Animenia
-        </a>
-        <div class="mb_burger">
-            <nav>
-                <ul>
-                    <li><a data-goto=".holovna" href=""> All</a></li>
-                    <li><a data-goto=".holovna" href=""> Top 100 </a><img src="img/icon/header_list.svg" alt=""></li>
-                    <li><a data-goto=".holovna" href="">Genres </a><img src="img/icon/header_list.svg" alt=""></li>
-                    <li><a data-goto=".holovna" href="">Categories </a><img src="img/icon/header_list.svg" alt=""></li>
-                    <li><a data-goto=".holovna" href="">Anons</a></li>
-                    <li><a data-goto=".holovna" href="">Random</a></li>
-                </ul>
-            </nav>
-            <form action="">
-                <img src="img/icon/Search.svg" alt="">
-                <input class="header_search" type="text" placeholder="Search...">
-            </form>
-        </div>
-        <div class="header_profile">
-            <div>
-                <img src="img/icon/moon.svg" alt="">
-                <img src="img/icon/Notification.svg" alt="">
+    <div class="wrapper">
+        <header class="header">
+            <div class="header_container">
+                <a href="" class="header_logo">Animenia</a>
+                <div class="mb_burger">
+                    <nav>
+                        <ul>
+                            <li><a data-goto=".holovna" href=""> All</a></li>
+                            <li><a data-goto=".holovna" href=""> Top 100 </a><img src="img/icon/header_list.svg" alt=""></li>
+                            <li><a data-goto=".holovna" href="">Genres </a><img src="img/icon/header_list.svg" alt=""></li>
+                            <li><a data-goto=".holovna" href="">Categories </a><img src="img/icon/header_list.svg" alt=""></li>
+                            <li><a data-goto=".holovna" href="">Anons</a></li>
+                            <li><a data-goto=".holovna" href="">Random</a></li>
+                        </ul>
+                    </nav>
+                    <form action="">
+                        <img src="img/icon/Search.svg" alt="">
+                        <input class="header_search" type="text" placeholder="Search...">
+                    </form>
+                </div>
+                <div class="header_profile">
+                    <div>
+                        <img src="img/icon/moon.svg" alt="">
+                    </div>
+                    <img class="regiter_profile_img" src="img/icon/Profile.svg" alt="">
+                    <img class="category" src="img/icon/Category.svg" alt="">
+                </div>
             </div>
-            <img src="img/icon/Profile.jpg" alt="">
-            <img class="category" src="img/icon/Category.svg" alt="">
-        </div>
+        </header>
+        <main class="register_main">           
+            <div class="register_container">
+                <div class="reguster_form">
+                    <h2 class="register_title">Login</h2>
+                    <div class="register_data">
+                        <img src="img/icon/Profile.svg" alt="">
+                        <input type="text" placeholder="Login">
+                    </div>
+                    <div class="register_data">
+                        <img src="img/icon/Unlock.svg" alt="">
+                        <input id="pass" type="password" placeholder="Password">
+                        <img id="hide" class="hide" src="img/icon/Hide.svg" alt="" onclick="togglePasswordVisibility()">
+                    </div>  
+                    <div class="forgot">
+                         <a  href="">Forgot password</a>
+                    </div>
+                     <a class="register_btn" href="main.html">Login</a>
+                    <div class="register_description">
+                        <p>Don't have an account?</p>
+                        <a href="register.html">Register</a>
+                    </div>
+                    <div class="btns_login">
+                        <a class="facebook" href=""><img src="img/icon/Facebook.svg" alt="">Sign in with Facebook</a>
+                        <a class="google" href=""><img src="img/icon/Google.svg" alt="">Sign in with Google</a>
+                    </div>
+
+                </div>
+            </div>
+            <div class="register_bj">              
+                <img  src="img/bj.jpg" alt="">
+            </div>
+        </main>
     </div>
-</header>
-<main class="main">
-    <div class="main_container">
-        <div class="main_full">
-            <div class="main_content">
-                <div class="main_seasons">
-                    <div class="seasons_header">
-                        <div class="header_left">
-                            <img src="img/icon/galery.svg" alt="">
-                            <h2>Spring Season</h2>
-                        </div>
-                        <div class="navigation">
-                            <div class="swiper-button-prev"><img src="img/icon/Arrow - Left.svg" alt=""></div>
-                            <div class="swiper-button-next"><img src="img/icon/Arrow - Right.svg" alt=""></div>
-                        </div>
-                    </div>
-                    <div class="swiper-container">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <img src="img/anime-1.jpg" alt="">
-                                <div class="card_info">
-                                    <div class="card_status viewed">
-                                        <h3>Viewed</h3>
-                                    </div>
-                                    <div class="card_description">
-                                        <h2>Sono Bisque Doll wa Koi...</h2>
-                                        <p>Comedy, Romance, School Life</p>
-                                    </div>
-                                </div>
-                                <div class="catd_rating">
-                                    <img src="img/icon/Star.svg" alt="">
-                                    <p>9.7</p>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="img/anime-2.jpg" alt="">
-                                <div class="card_info">
-                                    <div class="card_status watching">
-                                        <h3>I'm watching</h3>
-                                    </div>
-                                    <div class="card_description">
-                                        <h2>Kenja no Mago</h2>
-                                        <p>Adventure, Comedy, Fantasy</p>
-                                    </div>
-                                </div>
-                                <div class="catd_rating">
-                                    <img src="img/icon/Star.svg" alt="">
-                                    <p>9.7</p>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="img/anime-3.jpg" alt="">
-                                <div class="card_info">
-                                    <div class="card_status thrown">
-                                        <h3>Thrown</h3>
-                                    </div>
-                                    <div class="card_description">
-                                        <h2>Boruto: Naruto Next...</h2>
-                                        <p>Comedy, Romance, School Life</p>
-                                    </div>
-                                </div>
-                                <div class="catd_rating">
-                                    <img src="img/icon/Star.svg" alt="">
-                                    <p>9.7</p>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="img/anime-1.jpg" alt="">
-                                <div class="card_info">
-                                    <div class="card_status viewed">
-                                        <h3>Viewed</h3>
-                                    </div>
-                                    <div class="card_description">
-                                        <h2>Sono Bisque Doll wa Koi...</h2>
-                                        <p>Comedy, Romance, School Life</p>
-                                    </div>
-                                </div>
-                                <div class="catd_rating">
-                                    <img src="img/icon/Star.svg" alt="">
-                                    <p>9.7</p>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="img/anime-2.jpg" alt="">
-                                <div class="card_info">
-                                    <div class="card_status watching">
-                                        <h3>I'm watching</h3>
-                                    </div>
-                                    <div class="card_description">
-                                        <h2>Kenja no Mago</h2>
-                                        <p>Adventure, Comedy, Fantasy</p>
-                                    </div>
-                                </div>
-                                <div class="catd_rating">
-                                    <img src="img/icon/Star.svg" alt="">
-                                    <p>9.7</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="main_top">
-                    <div class="top_header">
-                            <img src="img/icon/galery.svg" alt="">
-                            <h2>Top 100</h2>
-                    </div>
-                    <div class="top_items">
-                        <div class="top_item">
-                            <img src="img/anime-1.jpg" alt="">
-                            <div class="card_info">
-                                <div class="card_status viewed">
-                                    <h3>Viewed</h3>
-                                </div>
-                                <div class="card_description">
-                                    <h2>Sono Bisque Doll wa Koi...</h2>
-                                    <p>Comedy, Romance, School Life</p>
-                                </div>
-                            </div>
-                            <div class="catd_rating">
-                                <img src="img/icon/Star.svg" alt="">
-                                <p>9.7</p>
-                            </div>
-                        </div>
-                        <div class="top_item">
-                            <img src="img/anime-2.jpg" alt="">
-                            <div class="card_info">
-                                <div class="card_status watching">
-                                    <h3>I'm watching</h3>
-                                </div>
-                                <div class="card_description">
-                                    <h2>Kenja no Mago</h2>
-                                    <p>Adventure, Comedy, Fantasy</p>
-                                </div>
-                            </div>
-                            <div class="catd_rating">
-                                <img src="img/icon/Star.svg" alt="">
-                                <p>9.7</p>
-                            </div>
-                        </div>
-                        <div class="top_item">
-                            <img src="img/anime-3.jpg" alt="">
-                            <div class="card_info">
-                                <div class="card_status thrown">
-                                    <h3>Thrown</h3>
-                                </div>
-                                <div class="card_description">
-                                    <h2>Boruto: Naruto Next...</h2>
-                                    <p>Comedy, Romance, School Life</p>
-                                </div>
-                            </div>
-                            <div class="catd_rating">
-                                <img src="img/icon/Star.svg" alt="">
-                                <p>9.7</p>
-                            </div>
-                        </div>
-                        <div class="top_item">
-                            <img src="img/anime-1.jpg" alt="">
-                            <div class="card_info">
-                                <div class="card_status viewed">
-                                    <h3>Viewed</h3>
-                                </div>
-                                <div class="card_description">
-                                    <h2>Sono Bisque Doll wa Koi...</h2>
-                                    <p>Comedy, Romance, School Life</p>
-                                </div>
-                            </div>
-                            <div class="catd_rating">
-                                <img src="img/icon/Star.svg" alt="">
-                                <p>9.7</p>
-                            </div>
-                        </div>
-                        <div class="top_item">
-                            <img src="img/anime-2.jpg" alt="">
-                            <div class="card_info">
-                                <div class="card_status watching">
-                                    <h3>I'm watching</h3>
-                                </div>
-                                <div class="card_description">
-                                    <h2>Kenja no Mago</h2>
-                                    <p>Adventure, Comedy, Fantasy</p>
-                                </div>
-                            </div>
-                            <div class="catd_rating">
-                                <img src="img/icon/Star.svg" alt="">
-                                <p>9.7</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <button class="main_mo_btn">Load More</button>
-            </div>
-            <sidebar class="main_sidebar">
-                <div class="sidebar_news">
-                    <div class="news_header">
-                        <img src="img/icon/Document.svg" alt="">
-                        <h3>Latest news</h3>
-                    </div>
-                    <div class="news_cards one">
-                        <div class="card">
-                            <div class="news_card">
-                                <h3 class="card_title">FullMetal Alchemist [12 episod]</h3>
-                                <div>
-                                    <p class="genre">Action, Magic, School</p>
-                                    <p class="date">12/09/2022</p>
-                                </div>                           
-                            </div>
-                            <img class="card_img" src="img/sidebar-1.jpg" alt="">
-                        </div>
-                        <div class="card">
-                            <div class="news_card">
-                                <h3 class="card_title">FullMetal Alchemist [12 episod]</h3>
-                                <div>
-                                    <p class="genre">Action, Magic, School</p>
-                                    <p class="date">12/09/2022</p>      
-                                </div>                     
-                            </div>
-                            <img class="card_img" src="img/sidebar-1.jpg" alt="">
-                        </div>
-                        <div class="card">
-                            <div class="news_card">
-                                <h3 class="card_title">FullMetal Alchemist [12 episod]</h3>
-                                <div>
-                                    <p class="genre">Action, Magic, School</p>
-                                    <p class="date">12/09/2022</p>         
-                                </div>                  
-                            </div>
-                            <img class="card_img" src="img/sidebar-1.jpg" alt="">
-                        </div>
-                        <div class="card">
-                            <div class="news_card">
-                                <h3 class="card_title">FullMetal Alchemist [12 episod]</h3>
-                                <div>
-                                    <p class="genre">Action, Magic, School</p>
-                                    <p class="date">12/09/2022</p>  
-                                </div>                         
-                            </div>
-                            <img class="card_img" src="img/sidebar-1.jpg" alt="">
-                        </div>
-                        <div class="card">
-                            <div class="news_card">
-                                <h3 class="card_title">FullMetal Alchemist [12 episod]</h3>
-                                <div>
-                                    <p class="genre">Action, Magic, School</p>
-                                    <p class="date">12/09/2022</p>    
-                                </div>                       
-                            </div>
-                            <img class="card_img" src="img/sidebar-1.jpg" alt="">
-                        </div>
-                    </div>
-                </div>
-                <div class="sidebar_reviews">
-                    <div class="reviews_header">
-                        <img src="img/icon/Video.svg" alt="">
-                        <h3>Reviews</h3>
-                    </div>
-                </div>
-                <div class="sidebar_social_btn">
-                    <a href="" class="social_btn inst">Instagram</a>
-                    <a href="" class="social_btn teleg">Telegram</a>
-                    <a href="" class="social_btn youtube">YouTube</a>
-                </div>
-            </sidebar>
-        </div>
-    </div>
-</main>
-<footer class="footer">
-    <div class="footer_container">
-        <div class="footer_social">
-            <h2 class="socisl_title">Animenia</h2>
-            <p class="social_subtitle">Copyright © Animenia All rights reserved</p>
-            <div class="socisl_items">
-                <img src="img/social/facebook.svg" alt="" class="social_item">
-                <img src="img/social/tviter.svg" alt="" class="social_item">
-                <img src="img/social/insta.svg" alt="" class="social_item">
-                <img src="img/social/telegram.svg" alt="" class="social_item">
-                <img src="img/social/yotube.svg" alt="" class="social_item">
-            </div>
-        </div>
-        <div class="footer_list">
-            <div class="footer_seasons">
-                <h3 class="seasons_title footer_tt">Seasons</h3>
-                <ul>
-                    <li>Winter</li>
-                    <li>Spring</li>
-                    <li>Summer</li>
-                    <li>Autumn</li>
-                </ul>
-            </div>
-            <div class="footer_genres">
-                <h3 class="genres_title footer_tt">Genres</h3>
-                <ul>
-                    <li>School Life</li>
-                    <li>Magic</li>
-                    <li>Romantic</li>
-                    <li>Action</li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer_about">
-            <h3 class="about_title footer_tt">About Us</h3>
-            <div class="about_text">
-                <p>All videos on the site are provided for information only and do not involve downloading.</p>
-                <p>Technical support and assistance to users: all.site.anime@gmail.com</p>
-                <p>This site is protected by reCAPTCHA and the Google Privacy Policy and Terms of Service apply.</p>
-            </div>
-        </div>
-        <button class="button_up"><img src="img/icon/up.svg" alt=""></button>
-    </div>
-</footer>
-</div>
-<script  src=" https://code.jquery.com/jquery-3.6.3.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-<script src="main.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>

@@ -128,6 +128,7 @@ body {
 }
 .register_main .register_container .reguster_form .register_btn {
   width: 100%;
+  display: block;
   text-align: center;
   border-radius: 10px;
   background: #DA1414;
