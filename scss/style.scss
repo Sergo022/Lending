@@ -47,6 +47,8 @@ padding: 0 15px;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Ubuntu:wght@300&display=swap');
+@import"./register.scss";
+@import"./_login.scss";
 //загальні класи
 .footer_tt{
     font-family: 'Poppins';

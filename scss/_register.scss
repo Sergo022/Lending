@@ -1,0 +1,144 @@
+.regiter_profile_img{
+    background: #F6F6F6;
+    padding: 8px;
+    border-radius: 50%;
+}
+.main{
+}
+
+.header{
+    z-index: 100;
+}
+.register_main {
+    height: 90.1vh;
+    position: relative;
+    .register_bj{ 
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        img{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            object-fit: cover;
+        
+        }
+    }
+    .register_container{
+
+        .reguster_form {
+            left: 570px;
+            top: 140px;
+            display: inline-block;
+            min-width: 540px;
+            position: relative;
+            z-index: 10;
+            padding: 40px 95px 60px 95px;
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            border-radius: 10px;
+            .register_title {
+                font-family: 'Poppins';
+                font-weight: 400;
+                font-size: 38px;
+                line-height: 135%;
+                text-align: center;
+                color: #404156;
+                margin-bottom: 20px;
+            }
+            .register_data{
+                position: relative;
+                margin-bottom: 20px;
+                img{
+                    padding: 15px;
+                    position: absolute;
+                }
+                input{
+                    width: 100%;
+                    padding: 20px 15px 20px 54px;
+                    background: #F6F6F6;
+                    border-radius: 10px;
+
+                }
+                .hide{
+                    right: 0;
+                    padding: 15px;
+                    position: absolute;
+                    // opacity: 0.5;
+                }
+
+            }
+            .register_btn{
+                width: 100%;
+                text-align: center;
+                border-radius: 10px;
+                background: #DA1414;
+                padding: 15px;
+                margin-bottom: 20px;
+                    font-family: 'Poppins';
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 135%;
+                    color: #FFFFFF;
+                    cursor: pointer;
+            }
+            .register_description{
+                display: flex;
+                gap: 10px;
+                justify-content: center;
+                a{
+                    font-family: 'Poppins';
+                    font-weight: 400;
+                    font-size: 12px;
+                    line-height: 135%;
+                    text-decoration-line: underline;
+                    color: #DA1414;
+                }
+            }
+            .btns_login{
+                margin-top: 40px;
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+                width: 100%;
+                a{
+                    display: flex;
+                    justify-content: center;
+                    padding: 15px;
+                    align-items: center;
+                    text-align: center;
+                    border-radius: 10px;
+                    font-family: 'Poppins';
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 135%;
+                    img{
+                        margin-right: 15px;
+
+                    }
+                }
+                .google{
+                    background-color: #fff;
+                    color: #404156;
+                }
+                .facebook{
+                    background: #0053B5;
+                    color: #FFFFFF;
+                }
+            }
+        }
+    }
+}
+
+
+
+.register_login {
+}
+.register_description {
+}
+.btns_ligin {
+}

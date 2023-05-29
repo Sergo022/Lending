@@ -1,3 +1,4 @@
+//бургер
 document.addEventListener("click",documentActions);
 function documentActions(e){
     const targetElement=e.target;
@@ -28,6 +29,8 @@ function documentActions(e){
         e.preventDefault();
     }
 }
+
+//слайдер
 new Swiper('.swiper-container',{
     navigation:{
         nextEl: '.swiper-button-next',
@@ -36,7 +39,7 @@ new Swiper('.swiper-container',{
     slidesPerView: 3,
     spaceBetween: 30,
     breakpoints:{
-        350:{
+        320:{
             slidesPerView: 1,
         },
         510:{
@@ -48,7 +51,7 @@ new Swiper('.swiper-container',{
     }
 });
 
-
+//акордеон
 $(document).ready(function(){
     $('.news_card').first().addClass('active').next().slideToggle(0);
     $('.news_card').click(function(event){
@@ -60,3 +63,31 @@ $(document).ready(function(){
         $(this).toggleClass('active').next().slideToggle(300);
     });
 });
+
+//функції що показують/ховають пароль і задають іконці opsity
+function togglePasswordVisibility1() {
+    var passwordInput = document.getElementById("pass1");
+    var image = document.getElementById("hide1");
+    
+
+    if (passwordInput.type === "password") {
+      passwordInput.type = "text";
+      image.style.opacity = "0.5";
+    } else {
+      passwordInput.type = "password";
+      image.style.opacity = "1";
+    }
+}
+function togglePasswordVisibility() {
+    var passwordInput = document.getElementById("pass");
+    var image = document.getElementById("hide");
+    
+
+    if (passwordInput.type === "password") {
+      passwordInput.type = "text";
+      image.style.opacity = "0.5";
+    } else {
+      passwordInput.type = "password";
+      image.style.opacity = "1";
+    }
+}
