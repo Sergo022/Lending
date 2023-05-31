@@ -344,6 +344,11 @@ body{
                     text-align: center;
                     padding: 20px 0;
                     cursor: pointer;
+                     transition: all 0.3s ease 0s;
+                    &:hover{
+                        color: white;
+                        background-color: #DA1414;
+                    }
                 }
             }
             .main_sidebar {
@@ -536,9 +541,14 @@ body{
             .socisl_items {
                 display: flex;
                 gap: 15px;
+                a{
+                    display: flex;
+                    .social_item {
+                        cursor: pointer;
+                    }
+                }
             }
-            .social_item {
-            }
+            
         }
         .footer_list{
             display: flex;
@@ -551,11 +561,13 @@ body{
                 }
             ul{
                 li{
-                    font-family: 'Poppins';
-                    font-weight: 400;
-                    font-size: 12px;
-                    line-height: 18px;
-                    color: #404156;
+                    a{
+                        font-family: 'Poppins';
+                        font-weight: 400;
+                        font-size: 12px;
+                        line-height: 18px;
+                        color: #404156;
+                    }
                 }
                 li:not(:last-child){
                     margin-bottom: 10px;
@@ -569,11 +581,13 @@ body{
                 }
                 ul{
                     li{
-                        font-family: 'Poppins';
-                        font-weight: 400;
-                        font-size: 12px;
-                        line-height: 18px;
-                        color: #404156;
+                        a{
+                            font-family: 'Poppins';
+                            font-weight: 400;
+                            font-size: 12px;
+                            line-height: 18px;
+                            color: #404156;
+                        }
                     }
                     li:not(:last-child){
                         margin-bottom: 10px;
@@ -601,11 +615,21 @@ body{
                    top: 0;
                    right: 15px;
             }
-            padding: 15px 12px;
+            padding: 14px 11px;
             background-color: #DA1414;
             border-radius: 10px;
             height: 40px;
             width: 40px;
+            border: 1px solid #DA1414;
+            cursor: pointer;
+            transition: all 0.3s ease 0s;
+
+            &:hover{
+                background-color: inherit;
+            }
+            &:hover img{
+                filter: brightness(0) saturate(100%) invert(17%) sepia(62%) saturate(5963%) hue-rotate(355deg) brightness(88%) contrast(93%);
+            }
         }
     }
 }

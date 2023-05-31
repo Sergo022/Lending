@@ -601,6 +601,11 @@ body {
   text-align: center;
   padding: 20px 0;
   cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+.main .main_container .main_full .main_content .main_mo_btn:hover {
+  color: white;
+  background-color: #DA1414;
 }
 .main .main_container .main_full .main_sidebar {
   width: 100%;
@@ -773,6 +778,12 @@ body {
   display: flex;
   gap: 15px;
 }
+.footer .footer_container .footer_social .socisl_items a {
+  display: flex;
+}
+.footer .footer_container .footer_social .socisl_items a .social_item {
+  cursor: pointer;
+}
 .footer .footer_container .footer_list {
   display: flex;
   gap: 30px;
@@ -785,7 +796,7 @@ body {
     margin-right: 63px;
   }
 }
-.footer .footer_container .footer_list .footer_seasons ul li {
+.footer .footer_container .footer_list .footer_seasons ul li a {
   font-family: "Poppins";
   font-weight: 400;
   font-size: 12px;
@@ -803,7 +814,7 @@ body {
     margin-right: 63px;
   }
 }
-.footer .footer_container .footer_list .footer_genres ul li {
+.footer .footer_container .footer_list .footer_genres ul li a {
   font-family: "Poppins";
   font-weight: 400;
   font-size: 12px;
@@ -829,11 +840,14 @@ body {
   color: #404156;
 }
 .footer .footer_container .button_up {
-  padding: 15px 12px;
+  padding: 14px 11px;
   background-color: #DA1414;
   border-radius: 10px;
   height: 40px;
   width: 40px;
+  border: 1px solid #DA1414;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
 }
 @media (max-width: 570px) {
   .footer .footer_container .button_up {
@@ -841,4 +855,10 @@ body {
     top: 0;
     right: 15px;
   }
+}
+.footer .footer_container .button_up:hover {
+  background-color: inherit;
+}
+.footer .footer_container .button_up:hover img {
+  filter: brightness(0) saturate(100%) invert(17%) sepia(62%) saturate(5963%) hue-rotate(355deg) brightness(88%) contrast(93%);
 }/*# sourceMappingURL=style.css.map */
