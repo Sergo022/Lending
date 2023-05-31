@@ -60,7 +60,7 @@ $(document).ready(function(){
             $('.news_card').not($(this)).removeClass('active');
             $('.card_img').not($(this).next()).slideUp(300);
         }
-        $(this).toggleClass('active').next().slideToggle(300);
+        $(this).toggleClass('active').next().slideToggle(200);
     });
 });
 

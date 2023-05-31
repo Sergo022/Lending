@@ -49,6 +49,7 @@ padding: 0 15px;
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Ubuntu:wght@300&display=swap');
 @import"./register.scss";
 @import"./_login.scss";
+@import"./_profile.scss";
 //загальні класи
 .footer_tt{
     font-family: 'Poppins';
@@ -135,6 +136,32 @@ body{
         font-family: 'Poppins';
         font-weight: 400;
         font-size: 16px;
+        line-height: 135%;
+        color: #DA1414;
+    }
+}
+
+._header{
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(230, 230, 230, 0.25);
+    border-radius: 10px;
+    padding: 18px 20px;
+    display: flex;
+    margin-bottom: 20px;
+    gap: 10px;
+    align-items: center;
+    img{
+        padding: 6.5px;
+        background: #DA1414;
+        border-radius: 5px;
+    svg {
+        fill: black;
+    }
+    }
+    h2{
+        font-family: 'Poppins';
+        font-weight: 500;
+        font-size: 18px;
         line-height: 135%;
         color: #DA1414;
     }
@@ -234,7 +261,7 @@ body{
             display: flex;
             align-items: center;
             gap: 20px;
-            div img:not(:last-child){
+            div a:not(:last-child){
                 margin-right: 8px;
             }
 
@@ -254,7 +281,7 @@ body{
 
 
 .main {
-    margin-top: 50px;
+    margin: 50px 0;
     .main_container {
         .main_full{
             display: flex;
@@ -302,28 +329,7 @@ body{
                 .main_top{
                     margin-top: 50px;
                     margin-bottom: 32px;
-                    .top_header{
-                        background: #FFFFFF;
-                        box-shadow: 0px 4px 4px rgba(230, 230, 230, 0.25);
-                        border-radius: 10px;
-                        padding: 18px 20px;
-                        display: flex;
-                        margin-bottom: 20px;
-                        gap: 10px;
-                        align-items: center;
-                        img{
-                            padding: 6.5px;
-                            background: #DA1414;
-                            border-radius: 5px;
-                        }
-                        h2{
-                            font-family: 'Poppins';
-                            font-weight: 500;
-                            font-size: 18px;
-                            line-height: 135%;
-                            color: #DA1414;
-                        }
-                    }
+                    
                 }
                 .main_mo_btn{
                     width: 100%;
@@ -343,28 +349,6 @@ body{
             .main_sidebar {
                 width: 100%;
                 .sidebar_news {
-                    .news_header {
-                        align-items: center;
-                        display: flex;
-                        gap: 10px;
-                        margin-bottom: 20px;
-                        padding: 20px;
-                        background: #FFFFFF;
-                        box-shadow: 0px 4px 4px rgba(230, 230, 230, 0.25);
-                        border-radius: 10px;
-                        img{
-                            background: #DA1414;
-                            border-radius: 5px;
-                            padding: 5px;
-                        }
-                        h3{
-                            font-family: 'Poppins';
-                            font-weight: 500;
-                            font-size: 18px;
-                            line-height: 135%;
-                            color: #DA1414;
-                        }
-                    }
                     .news_cards {
                         margin: 0 20px;
                         display: flex;
@@ -452,29 +436,7 @@ body{
                     }
                 }
                 .sidebar_reviews {
-                    .reviews_header {
-                        margin-top: 50px;
-                        align-items: center;
-                        display: flex;
-                        gap: 10px;
-                        margin-bottom: 20px;
-                        padding: 20px;
-                        background: #FFFFFF;
-                        box-shadow: 0px 4px 4px rgba(230, 230, 230, 0.25);
-                        border-radius: 10px;
-                        img{
-                            background: #DA1414;
-                            border-radius: 5px;
-                            padding: 5px;
-                        }
-                        h3{
-                            font-family: 'Poppins';
-                            font-weight: 500;
-                            font-size: 18px;
-                            line-height: 135%;
-                            color: #DA1414;
-                        }
-                    }                  
+                    margin-top: 50px;     
                 }
                 .sidebar_social_btn {
                     margin-top: 50px;
@@ -537,7 +499,6 @@ body{
 
 .footer {
     padding: 50px 0;
-    margin-top: 50px;
     background-color: white;
     .footer_container {
         display: flex;
