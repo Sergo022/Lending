@@ -112,11 +112,7 @@ Auto Height
   align-items: center;
   gap: 10px;
 }
-.swiper-button-prev, .swiper-button-next{
-  cursor: pointer;
-  background: #FBD0D0;
-  border-radius: 5px;
-}
+
 .swiper-button-prev, .swiper-button-next img{
   padding: 5px;  
 }
@@ -124,9 +120,12 @@ Auto Height
   border-radius: 10px;
   position: relative;
   display: inline-block;
+  border-radius: 10px;
 }
 .swiper-slide img {
     width: 100%;
     display: block;
     height: auto;
+    border-radius: 10px;
+
 }

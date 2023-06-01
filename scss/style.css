@@ -305,12 +305,50 @@ input:checked + .slider:before {
   transform: translateX(19px);
 }
 
+:root {
+  --clr-body-bg: #F6F6F6;
+  --clr-header: #fff;
+  --clr-icon-bg: #DA1414;
+  --clr-card-blur:rgba(255, 255, 255, 0.9);
+  --clr-red-txt:#DA1414;
+  --clr-gray-txt:#DA1414;
+  --clr-subtitle-1:#404156;
+  --clr-subtitle-2:#404156;
+  --clr-search:#F6F6F6;
+  --clr-btn-bg:#FAFAFA;
+  --clr-btn-up:#DA1414;
+  --clr-btn-triple:#404156;
+  --clr-bg-svipe:#FBD0D0;
+  --clr-reiting-bg:rgba(255, 255, 255, 0.8);
+}
+
+html[data-theme=dark] {
+  --clr-body-bg: #121212;
+  --clr-header: #262626;
+  --clr-icon-bg: #DEDEDE;
+  --clr-card-blur:rgba(18, 18, 18, 0.9);
+  --clr-red-txt:#DEDEDE;
+  --clr-gray-txt:#DEDEDE;
+  --clr-subtitle-1:#9F9F9F;
+  --clr-subtitle-2:#DEDEDE;
+  --clr-search:#121212;
+  --clr-btn-bg:#181818;
+  --clr-btn-up:#121212;
+  --clr-btn-triple:#DEDEDE;
+  --clr-bg-svipe:#121212;
+  --clr-reiting-bg:rgba(18, 18, 18, 0.8);
+}
+
+.hide {
+  display: none;
+}
+
 .footer_tt {
   font-family: "Poppins";
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;
-  color: #DA1414;
+  color: var(--clr-red-txt);
   margin-bottom: 10px;
 }
 
@@ -327,7 +365,13 @@ input:checked + .slider:before {
 }
 
 body {
-  background: #F6F6F6;
+  background: var(--clr-body-bg);
+}
+
+.swiper-button-prev, .swiper-button-next {
+  cursor: pointer;
+  background: var(--clr-bg-svipe);
+  border-radius: 5px;
 }
 
 .top_items {
@@ -338,11 +382,13 @@ body {
 .top_items .top_item {
   position: relative;
   display: inline-block;
+  border-radius: 10px;
 }
 .top_items .top_item img {
   width: 100%;
   display: block;
   height: auto;
+  border-radius: 10px;
 }
 
 .card_info {
@@ -365,16 +411,17 @@ body {
 
 .card_description {
   padding: 20px;
-  background: rgba(255, 255, 255, 0.9);
+  background: var(--clr-card-blur);
   -webkit-backdrop-filter: blur(2.5px);
           backdrop-filter: blur(2.5px);
+  border-radius: 0 0 10px 10px;
 }
 .card_description h2 {
   font-family: "Poppins";
   font-weight: 500;
   font-size: 16px;
   line-height: 135%;
-  color: #DA1414;
+  color: var(--clr-red-txt);
   margin-bottom: 10px;
 }
 .card_description p {
@@ -382,14 +429,14 @@ body {
   font-weight: 400;
   font-size: 12px;
   line-height: 135%;
-  color: #404156;
+  color: var(--clr-subtitle-1);
 }
 
 .catd_rating {
   display: flex;
   gap: 11px;
   padding: 5px 10px;
-  background: rgba(255, 255, 255, 0.8);
+  background: var(--clr-reiting-bg);
   -webkit-backdrop-filter: blur(5px);
           backdrop-filter: blur(5px);
   position: absolute;
@@ -401,11 +448,11 @@ body {
   font-weight: 400;
   font-size: 16px;
   line-height: 135%;
-  color: #DA1414;
+  color: var(--clr-red-txt);
 }
 
 ._header {
-  background: #FFFFFF;
+  background: var(--clr-header);
   box-shadow: 0px 4px 4px rgba(230, 230, 230, 0.25);
   border-radius: 10px;
   padding: 18px 20px;
@@ -415,8 +462,8 @@ body {
   align-items: center;
 }
 ._header img {
-  padding: 6.5px;
-  background: #DA1414;
+  padding: 6px;
+  background: var(--clr-icon-bg);
   border-radius: 5px;
 }
 ._header img svg {
@@ -427,12 +474,12 @@ body {
   font-weight: 500;
   font-size: 18px;
   line-height: 135%;
-  color: #DA1414;
+  color: var(--clr-red-txt);
 }
 
 .header {
   padding: 26px 0;
-  background: #FFFFFF;
+  background: var(--clr-header);
   box-shadow: 0px 4px 4px rgba(230, 230, 230, 0.25);
 }
 .header .header_container {
@@ -446,7 +493,7 @@ body {
   font-weight: 500;
   font-size: 24px;
   line-height: 135%;
-  color: #DA1414;
+  color: var(--clr-red-txt);
   cursor: pointer;
 }
 .header .header_container .mb_burger {
@@ -499,7 +546,7 @@ body {
   font-weight: 400;
   font-size: 16px;
   line-height: 135%;
-  color: #404156;
+  color: var(--clr-subtitle-1);
   transition: all 0.3s ease 0s;
 }
 @media (max-width: 1073px) {
@@ -517,7 +564,7 @@ body {
 }
 .header .header_container .mb_burger form .header_search {
   padding: 10px 10px 10px 38px;
-  background: #F6F6F6;
+  background: var(--clr-search);
   border-radius: 10px;
 }
 .header .header_container .header_profile {
@@ -525,8 +572,15 @@ body {
   align-items: center;
   gap: 20px;
 }
-.header .header_container .header_profile div a:not(:last-child) {
-  margin-right: 8px;
+.header .header_container .header_profile div {
+  cursor: pointer;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.header .header_container .header_profile div .sun {
+  height: 20px;
+  width: 20px;
 }
 .header .header_container .category {
   display: none;
@@ -559,7 +613,7 @@ body {
   }
 }
 .main .main_container .main_full .main_content .main_seasons .seasons_header {
-  background: #FFFFFF;
+  background: var(--clr-header);
   box-shadow: 0px 4px 4px rgba(230, 230, 230, 0.25);
   border-radius: 10px;
   padding: 18px 20px;
@@ -573,8 +627,8 @@ body {
   align-items: center;
 }
 .main .main_container .main_full .main_content .main_seasons .seasons_header .header_left img {
-  padding: 6.5px;
-  background: #DA1414;
+  padding: 6px;
+  background: var(--clr-icon-bg);
   border-radius: 5px;
 }
 .main .main_container .main_full .main_content .main_seasons .seasons_header .header_left h2 {
@@ -582,7 +636,7 @@ body {
   font-weight: 500;
   font-size: 18px;
   line-height: 135%;
-  color: #DA1414;
+  color: var(--clr-red-txt);
 }
 .main .main_container .main_full .main_content .main_top {
   margin-top: 50px;
@@ -590,10 +644,10 @@ body {
 }
 .main .main_container .main_full .main_content .main_mo_btn {
   width: 100%;
-  background: #FAFAFA;
+  background: var(--clr-btn-bg);
   box-shadow: 0px 4px 4px rgba(230, 230, 230, 0.25);
   border-radius: 10px;
-  color: #DA1414;
+  color: var(--clr-red-txt);
   font-family: "Poppins";
   font-weight: 500;
   font-size: 18px;
@@ -618,21 +672,21 @@ body {
 }
 .main .main_container .main_full .main_sidebar .sidebar_news .news_cards .card .news_card.active .card_title::after {
   transform: rotate(-45deg);
-  background-color: red;
+  background-color: var(--clr-red-txt);
 }
 .main .main_container .main_full .main_sidebar .sidebar_news .news_cards .card .news_card.active .card_title::before {
   transform: rotate(45deg);
-  background-color: red;
+  background-color: var(--clr-red-txt);
 }
 .main .main_container .main_full .main_sidebar .sidebar_news .news_cards .card .news_card.active h3 {
-  color: #DA1414;
+  color: var(--clr-red-txt);
 }
 .main .main_container .main_full .main_sidebar .sidebar_news .news_cards .card .news_card h3 {
   font-family: "Poppins";
   font-weight: 400;
   font-size: 12px;
   line-height: 135%;
-  color: #404156;
+  color: var(--clr-subtitle-2);
   position: relative;
   cursor: pointer;
 }
@@ -731,7 +785,7 @@ body {
 }
 .footer {
   padding: 50px 0;
-  background-color: white;
+  background-color: var(--clr-header);
 }
 .footer .footer_container {
   display: flex;
@@ -763,7 +817,7 @@ body {
   font-weight: 500;
   font-size: 24px;
   line-height: 36px;
-  color: #DA1414;
+  color: var(--clr-red-txt);
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 .footer .footer_container .footer_social .social_subtitle {
@@ -801,7 +855,7 @@ body {
   font-weight: 400;
   font-size: 12px;
   line-height: 18px;
-  color: #404156;
+  color: var(--clr-subtitle-1);
 }
 .footer .footer_container .footer_list .footer_seasons ul li:not(:last-child) {
   margin-bottom: 10px;
@@ -819,7 +873,7 @@ body {
   font-weight: 400;
   font-size: 12px;
   line-height: 18px;
-  color: #404156;
+  color: var(--clr-subtitle-1);
 }
 .footer .footer_container .footer_list .footer_genres ul li:not(:last-child) {
   margin-bottom: 10px;
@@ -837,15 +891,18 @@ body {
   font-weight: 400;
   font-size: 12px;
   line-height: 18px;
-  color: #404156;
+  color: var(--clr-subtitle-1);
+}
+.footer .footer_container .footer_about .about_text p:not(:last-child) {
+  margin-bottom: 7px;
 }
 .footer .footer_container .button_up {
   padding: 14px 11px;
-  background-color: #DA1414;
+  background-color: var(--clr-btn-up);
   border-radius: 10px;
   height: 40px;
   width: 40px;
-  border: 1px solid #DA1414;
+  border: 1px solid var(--clr-btn-up);
   cursor: pointer;
   transition: all 0.3s ease 0s;
 }
