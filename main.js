@@ -60,7 +60,7 @@ $(document).ready(function(){
             $('.news_card').not($(this)).removeClass('active');
             $('.card_img').not($(this).next()).slideUp(300);
         }
-        $(this).toggleClass('active').next().slideToggle(200);
+        $(this).toggleClass('active').next().slideToggle(   );
     });
 });
 
@@ -97,7 +97,7 @@ function scrollToTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
-
+//==================================теми======================================================================
 
 const lightMode = document.querySelector('.sun');
 const darkMode = document.querySelector('.moon');
@@ -127,7 +127,7 @@ if (currentTheme) {
     }
 }
 
-
+//=========================================more btn======================================================================
 const buttons = document.querySelectorAll('.main_mo_btn');
 const textElements = document.querySelectorAll('.read-more-target');
 
@@ -144,3 +144,23 @@ buttons.forEach((button) => {
       }
   });
 });
+//==============================sceleton==========================================================
+const allSkeleton = document.querySelectorAll('.skeleton');
+window.addEventListener('load', function() {
+  setTimeout(function() {
+    allSkeleton.forEach(item => {
+      item.classList.remove('skeleton');
+    });
+  }, 1000);
+});
+
+const allSkeleton1 = document.querySelectorAll('.skeleton-1');
+window.addEventListener('load', function() {
+  setTimeout(function() {
+    allSkeleton1.forEach(item => {
+      item.classList.remove('skeleton-1');
+    });
+  }, 1000);
+});
+
+//===========================================================================================
