@@ -500,16 +500,19 @@ body{
                                     margin-bottom: 5px;
                                 }
                             }
-                            .card_img{
-                                @media (max-width:940px) {
-                                    max-width: 100px;
+                                .card_img{
+                                    display: none;
+                                    img{
+                                        @media (max-width:940px) {
+                                            max-width: 100px;
+                                        }
+                                        width: 100%;
+                                        border-radius: 10px;
+                                        cursor: pointer;
+                                        height: auto;
+
+                                    }
                                 }
-                                 width: 100%;
-                                display: none;
-                                height: auto;
-                                border-radius: 10px;
-                                cursor: pointer;
-                            }
                         }
                        
                     }

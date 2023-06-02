@@ -145,22 +145,35 @@ buttons.forEach((button) => {
   });
 });
 //==============================sceleton==========================================================
-const allSkeleton = document.querySelectorAll('.skeleton');
-window.addEventListener('load', function() {
-  setTimeout(function() {
-    allSkeleton.forEach(item => {
-      item.classList.remove('skeleton');
-    });
-  }, 1000);
-});
+const allSkeleton = document.querySelectorAll('.skeleton')
+window.addEventListener('load', function(){
+    allSkeleton.forEach(item=>{
+        item.classList.remove('skeleton')
+    })
+})
 
-const allSkeleton1 = document.querySelectorAll('.skeleton-1');
-window.addEventListener('load', function() {
-  setTimeout(function() {
-    allSkeleton1.forEach(item => {
-      item.classList.remove('skeleton-1');
-    });
-  }, 1000);
-});
+const allSkeleton1 = document.querySelectorAll('.skeleton-1')
+window.addEventListener('load', function(){
+    allSkeleton1.forEach(item=>{
+        item.classList.remove('skeleton-1')
+    })
+})
 
+// const allSkeleton = document.querySelectorAll('.skeleton');
+// window.addEventListener('load', function() {
+//   setTimeout(function() {
+//     allSkeleton.forEach(item => {
+//       item.classList.remove('skeleton');
+//     });
+//   }, 1000);
+// });
+
+// const allSkeleton1 = document.querySelectorAll('.skeleton-1');
+// window.addEventListener('load', function() {
+//   setTimeout(function() {
+//     allSkeleton1.forEach(item => {
+//       item.classList.remove('skeleton-1');
+//     });
+//   }, 1000);
+// });
 //===========================================================================================
