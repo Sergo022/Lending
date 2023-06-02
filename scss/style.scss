@@ -1,3 +1,4 @@
+//=====================================обнулення==========================================================
 *,
  *::before,
 *::after {
@@ -45,12 +46,12 @@ max-width: 1140px;
 margin: 0 auto;
 padding: 0 15px;
 }
-
+//==============================================================підключення файлів===============================================
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Ubuntu:wght@300&display=swap');
 @import"./register.scss";
 @import"./_login.scss";
 @import"./_profile.scss";
-
+//====================================================теми=======================================================================
 :root {
 
     --clr-body-bg: #F6F6F6;
@@ -61,6 +62,7 @@ padding: 0 15px;
     --clr-red-txt:#DA1414;
     --clr-gray-txt:#DA1414;
     --clr-subtitle-1:#404156;
+    --clr-subtitle-1-hov:#da141486;
     --clr-subtitle-2:#404156;
     --clr-search:#F6F6F6;
     --clr-btn-bg:#FAFAFA;
@@ -81,6 +83,7 @@ html[data-theme="dark"] {
     --clr-red-txt:#DEDEDE;
     --clr-gray-txt:#DEDEDE;
     --clr-subtitle-1:#9F9F9F;
+    --clr-subtitle-1-hov:#dadada;
     --clr-subtitle-2:#DEDEDE;
     --clr-search:#121212;
     --clr-btn-bg:#181818;
@@ -92,7 +95,7 @@ html[data-theme="dark"] {
 .hide{
     display: none;
   }
-//загальні класи
+//================================================загальні класи====================================================
 .footer_tt{
     font-family: 'Poppins';
     font-weight: 500;
@@ -119,20 +122,33 @@ body{
     border-radius: 5px;
   }
 // ========================CARD====================================================
-.top_items{
+.read-more-target {
+    display: none;
+}
+.showText {
+    display: block;
+}
+._items{
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(225px ,1fr));
     gap: 30px;
-    .top_item{
+    ._item{
+        cursor: pointer;
         position: relative;
-        display: inline-block;
+        // display: inline-block;
         border-radius: 10px;
+        overflow: hidden;
         img{
             width: 100%;
             display: block;
             height: auto;
             border-radius: 10px;
+             transition: all 0.3s ease 0s;
+            &:hover{
+                 transform: scale(1.1);
+            }
         }
+        
     }
 }
 
@@ -200,13 +216,10 @@ body{
     margin-bottom: 20px;
     gap: 10px;
     align-items: center;
-    img{
+    img {
         padding: 6px;
         background: var(--clr-icon-bg);
         border-radius: 5px;
-    svg {
-        fill: black;
-    }
     }
     h2{
         font-family: 'Poppins';
@@ -384,10 +397,11 @@ body{
                 }
                 .main_top{
                     margin-top: 50px;
-                    margin-bottom: 32px;
+                    
                     
                 }
                 .main_mo_btn{
+                    margin-top: 32px;
                     width: 100%;
                     background: var(--clr-btn-bg);
                     box-shadow: 0px 4px 4px rgba(230, 230, 230, 0.25);
@@ -497,7 +511,20 @@ body{
                     }
                 }
                 .sidebar_reviews {
-                    margin-top: 50px;     
+                    margin-top: 50px; 
+                    .reviews_main{
+                        display: flex;
+                        flex-direction: column;
+                        gap: 20px;
+                        img{
+                            width: 100%;
+                            height: auto;
+                            display: block;
+                            box-shadow: 0px 4px 4px rgba(230, 230, 230, 0.25);
+                            border-radius: 10px;
+
+                        }
+                    }    
                 }
                 .sidebar_social_btn {
                     margin-top: 50px;
@@ -623,6 +650,11 @@ body{
                         font-size: 12px;
                         line-height: 18px;
                         color: var(--clr-subtitle-1);
+                        cursor: pointer;
+                         transition: all 0.3s ease 0s;
+                        &:hover{
+                            color: var(--clr-subtitle-1-hov);
+                        }
                     }
                 }
                 li:not(:last-child){
@@ -642,7 +674,12 @@ body{
                             font-weight: 400;
                             font-size: 12px;
                             line-height: 18px;
+                            cursor: pointer;
+                             transition: all 0.3s ease 0s;
                             color: var(--clr-subtitle-1);
+                            &:hover{
+                                color: var(--clr-subtitle-1-hov);
+                            }
                         }
                     }
                     li:not(:last-child){
@@ -693,3 +730,41 @@ body{
     }
 }
 
+//===============================read more=================================================
+// .read-more-state {
+//     display: none;
+//   }
+  
+//   .read-more-target {
+//     opacity: 0;
+//     max-height: 0;
+//     font-size: 0;
+//     transition: .25s ease;
+//   }
+  
+//   .read-more-state:checked ~ ._items .read-more-target {
+//     opacity: 1;
+//     font-size: inherit;
+//     max-height: 999em;
+//     margin-top: 30px;
+//   } 
+
+//   .read-more-trigger {
+//     cursor: pointer;
+//     display: inline-block;
+//     padding: 0 .5em;
+//     color: #666;
+//     font-size: .9em;
+//     line-height: 2;
+//     border-radius: .25em;
+//   }
+
+//   .read-more-state ~ .read-more-trigger:before {
+//     content: 'Show more';
+//   }
+  
+//   .read-more-state:checked ~ .read-more-trigger:before {
+//     content: 'Show less';
+//   }
+
+//=======================================================================================================

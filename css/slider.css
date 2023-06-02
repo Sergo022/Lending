@@ -118,14 +118,21 @@ Auto Height
 }
 .swiper-slide {
   border-radius: 10px;
+  cursor: pointer;
   position: relative;
   display: inline-block;
   border-radius: 10px;
+  overflow: hidden;
+}
+.swiper-slide:hover img {
+  transform: scale(1.1);
+  transition: all 0.3s ease 0s;  
 }
 .swiper-slide img {
     width: 100%;
     display: block;
-    height: auto;
+    max-height: 350px;
     border-radius: 10px;
+    transition: all 0.3s ease 0s; 
 
 }

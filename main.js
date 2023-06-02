@@ -126,3 +126,21 @@ if (currentTheme) {
         darkMode.style.display = "block";
     }
 }
+
+
+const buttons = document.querySelectorAll('.main_mo_btn');
+const textElements = document.querySelectorAll('.read-more-target');
+
+buttons.forEach((button) => {
+  button.addEventListener('click', () => {
+    textElements.forEach((textElement) => {
+      textElement.classList.toggle('showText');
+    });
+    // Зміна тексту на кнопці
+    if (button.innerText === 'Load More') {
+        button.innerText = 'Show More';
+      } else {
+        button.innerText = 'Load More';
+      }
+  });
+});
