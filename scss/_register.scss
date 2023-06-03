@@ -29,106 +29,115 @@
         }
     }
     .register_container{
-
-        .reguster_form {
-            left: 570px;
-            top: 140px;
-            display: inline-block;
-            min-width: 540px;
+        div{
             position: relative;
-            z-index: 10;
-            padding: 40px 95px 60px 95px;
-            background: rgba(255, 255, 255, 0.8);
-            backdrop-filter: blur(10px);
-            border-radius: 10px;
-            .register_title {
-                font-family: 'Poppins';
-                font-weight: 400;
-                font-size: 38px;
-                line-height: 135%;
-                text-align: center;
-                color: #404156;
-                margin-bottom: 20px;
-            }
-            .register_data{
-                position: relative;
-                margin-bottom: 20px;
-                img{
-                    padding: 15px;
-                    position: absolute;
+            .reguster_form {
+                @media (max-width:730px) {
+                    top: 160px;
                 }
-                input{
-                    width: 100%;
-                    padding: 20px 15px 20px 54px;
-                    background: #F6F6F6;
-                    border-radius: 10px;
-
+                @media (max-width:560px) {
+                    padding: 30px;
                 }
-                .hidevis{
-                    right: 0;
-                    padding: 15px;
-                    position: absolute;
-                    cursor: pointer;
-                }
-
-            }
-            .register_btn{
                 width: 100%;
-                display: block;
-                text-align: center;
+                right: 0;
+                top: 140px;
+                display: inline-block;
+                max-width: 540px;
+                position: absolute;
+                z-index: 10;
+                padding: 40px 95px 60px 95px;
+                background: rgba(255, 255, 255, 0.8);
+                backdrop-filter: blur(10px);
                 border-radius: 10px;
-                background: #DA1414;
-                padding: 15px;
-                margin-bottom: 20px;
+                .register_title {
                     font-family: 'Poppins';
                     font-weight: 400;
-                    font-size: 16px;
+                    font-size: 38px;
                     line-height: 135%;
-                    color: #FFFFFF;
-                    cursor: pointer;
-            }
-            .register_description{
-                display: flex;
-                gap: 10px;
-                justify-content: center;
-                a{
-                    font-family: 'Poppins';
-                    font-weight: 400;
-                    font-size: 12px;
-                    line-height: 135%;
-                    text-decoration-line: underline;
-                    color: #DA1414;
-                }
-            }
-            .btns_login{
-                margin-top: 40px;
-                display: flex;
-                flex-direction: column;
-                gap: 8px;
-                width: 100%;
-                a{
-                    display: flex;
-                    justify-content: center;
-                    padding: 15px;
-                    align-items: center;
                     text-align: center;
-                    border-radius: 10px;
-                    font-family: 'Poppins';
-                    font-weight: 400;
-                    font-size: 16px;
-                    line-height: 135%;
+                    color: #404156;
+                    margin-bottom: 20px;
+                }
+                .register_data{
+                    position: relative;
+                    margin-bottom: 20px;
                     img{
-                        margin-right: 15px;
+                        padding: 15px;
+                        position: absolute;
+                    }
+                    input{
+                        width: 100%;
+                        padding: 20px 15px 20px 54px;
+                        background: #F6F6F6;
+                        border-radius: 10px;
 
                     }
+                    .hidevis{
+                        right: 0;
+                        padding: 15px;
+                        position: absolute;
+                        cursor: pointer;
+                    }
+
                 }
-                .google{
-                    background-color: #fff;
-                    color: #404156;
+                .register_btn{
+                    width: 100%;
+                    display: block;
+                    text-align: center;
+                    border-radius: 10px;
+                    background: #DA1414;
+                    padding: 15px;
+                    margin-bottom: 20px;
+                        font-family: 'Poppins';
+                        font-weight: 400;
+                        font-size: 16px;
+                        line-height: 135%;
+                        color: #FFFFFF;
+                        cursor: pointer;
                 }
-                .facebook{
-                    background: #0053B5;
-                    color: #FFFFFF;
+                .register_description{
+                    display: flex;
+                    gap: 10px;
+                    justify-content: center;
+                    a{
+                        font-family: 'Poppins';
+                        font-weight: 400;
+                        font-size: 12px;
+                        line-height: 135%;
+                        text-decoration-line: underline;
+                        color: #DA1414;
+                    }
+                }
+                .btns_login{
+                    margin-top: 40px;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 8px;
+                    width: 100%;
+                    a{
+                        display: flex;
+                        justify-content: center;
+                        padding: 11px;
+                        align-items: center;
+                        text-align: center;
+                        border-radius: 10px;
+                        font-family: 'Poppins';
+                        font-weight: 400;
+                        font-size: 16px;
+                        line-height: 135%;
+                        img{
+                            margin-right: 10px;
+
+                        }
+                    }
+                    .google{
+                        background-color: #fff;
+                        color: #404156;
+                    }
+                    .facebook{
+                        background: #0053B5;
+                        color: #FFFFFF;
+                    }
                 }
             }
         }

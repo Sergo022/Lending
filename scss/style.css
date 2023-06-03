@@ -85,12 +85,16 @@ body {
   -o-object-fit: cover;
      object-fit: cover;
 }
-.register_main .register_container .reguster_form {
-  left: 570px;
+.register_main .register_container div {
+  position: relative;
+}
+.register_main .register_container div .reguster_form {
+  width: 100%;
+  right: 0;
   top: 140px;
   display: inline-block;
-  min-width: 540px;
-  position: relative;
+  max-width: 540px;
+  position: absolute;
   z-index: 10;
   padding: 40px 95px 60px 95px;
   background: rgba(255, 255, 255, 0.8);
@@ -98,7 +102,17 @@ body {
           backdrop-filter: blur(10px);
   border-radius: 10px;
 }
-.register_main .register_container .reguster_form .register_title {
+@media (max-width: 730px) {
+  .register_main .register_container div .reguster_form {
+    top: 160px;
+  }
+}
+@media (max-width: 560px) {
+  .register_main .register_container div .reguster_form {
+    padding: 30px;
+  }
+}
+.register_main .register_container div .reguster_form .register_title {
   font-family: "Poppins";
   font-weight: 400;
   font-size: 38px;
@@ -107,27 +121,27 @@ body {
   color: #404156;
   margin-bottom: 20px;
 }
-.register_main .register_container .reguster_form .register_data {
+.register_main .register_container div .reguster_form .register_data {
   position: relative;
   margin-bottom: 20px;
 }
-.register_main .register_container .reguster_form .register_data img {
+.register_main .register_container div .reguster_form .register_data img {
   padding: 15px;
   position: absolute;
 }
-.register_main .register_container .reguster_form .register_data input {
+.register_main .register_container div .reguster_form .register_data input {
   width: 100%;
   padding: 20px 15px 20px 54px;
   background: #F6F6F6;
   border-radius: 10px;
 }
-.register_main .register_container .reguster_form .register_data .hidevis {
+.register_main .register_container div .reguster_form .register_data .hidevis {
   right: 0;
   padding: 15px;
   position: absolute;
   cursor: pointer;
 }
-.register_main .register_container .reguster_form .register_btn {
+.register_main .register_container div .reguster_form .register_btn {
   width: 100%;
   display: block;
   text-align: center;
@@ -142,12 +156,12 @@ body {
   color: #FFFFFF;
   cursor: pointer;
 }
-.register_main .register_container .reguster_form .register_description {
+.register_main .register_container div .reguster_form .register_description {
   display: flex;
   gap: 10px;
   justify-content: center;
 }
-.register_main .register_container .reguster_form .register_description a {
+.register_main .register_container div .reguster_form .register_description a {
   font-family: "Poppins";
   font-weight: 400;
   font-size: 12px;
@@ -155,17 +169,17 @@ body {
   text-decoration-line: underline;
   color: #DA1414;
 }
-.register_main .register_container .reguster_form .btns_login {
+.register_main .register_container div .reguster_form .btns_login {
   margin-top: 40px;
   display: flex;
   flex-direction: column;
   gap: 8px;
   width: 100%;
 }
-.register_main .register_container .reguster_form .btns_login a {
+.register_main .register_container div .reguster_form .btns_login a {
   display: flex;
   justify-content: center;
-  padding: 15px;
+  padding: 11px;
   align-items: center;
   text-align: center;
   border-radius: 10px;
@@ -174,14 +188,14 @@ body {
   font-size: 16px;
   line-height: 135%;
 }
-.register_main .register_container .reguster_form .btns_login a img {
-  margin-right: 15px;
+.register_main .register_container div .reguster_form .btns_login a img {
+  margin-right: 10px;
 }
-.register_main .register_container .reguster_form .btns_login .google {
+.register_main .register_container div .reguster_form .btns_login .google {
   background-color: #fff;
   color: #404156;
 }
-.register_main .register_container .reguster_form .btns_login .facebook {
+.register_main .register_container div .reguster_form .btns_login .facebook {
   background: #0053B5;
   color: #FFFFFF;
 }
@@ -205,6 +219,11 @@ body {
 .main-settings .main-settings_container {
   display: flex;
   gap: 30px;
+}
+@media (max-width: 800px) {
+  .main-settings .main-settings_container {
+    flex-direction: column;
+  }
 }
 .main-settings .main-settings_container .profile_settings {
   min-width: 255px;
@@ -304,6 +323,153 @@ input:checked + .slider {
 
 input:checked + .slider:before {
   transform: translateX(19px);
+}
+
+.main .main_container .main_full .main_content .anime-page_header {
+  justify-content: space-between;
+  background: var(--clr-header);
+  box-shadow: 0px 4px 4px rgba(230, 230, 230, 0.25);
+  border-radius: 10px;
+  padding: 18px 20px;
+  display: flex;
+  margin-bottom: 20px;
+  gap: 10px;
+  align-items: center;
+}
+.main .main_container .main_full .main_content .anime-page_header div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.main .main_container .main_full .main_content .anime-page_header div img {
+  padding: 6px;
+  background: var(--clr-icon-bg);
+  border-radius: 5px;
+}
+.main .main_container .main_full .main_content .anime-page_header div h2 {
+  font-family: "Poppins";
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 135%;
+  color: var(--clr-red-txt);
+}
+.main .main_container .main_full .main_content .anime-page_header .add-list {
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 135%;
+  color: #DA1414;
+}
+.main .main_container .main_full .main_content .anime-page_info {
+  display: grid;
+  grid-template-columns: 2.76fr 6fr;
+  gap: 30px;
+}
+.main .main_container .main_full .main_content .anime-page_info .anime-page_preview {
+  position: relative;
+}
+.main .main_container .main_full .main_content .anime-page_info .anime-page_preview .preview-img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  min-width: 230px;
+  display: block;
+  height: 350px;
+  border-radius: 10px;
+  width: 100%;
+}
+.main .main_container .main_full .main_content .anime-page_info .anime-page_preview .anime-like {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  z-index: 8;
+  background: rgba(255, 255, 255, 0.8);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  border-radius: 5px;
+}
+.main .main_container .main_full .main_content .anime-page_info .anime-page_preview .anime-like img {
+  padding: 8px;
+}
+.main .main_container .main_full .main_content .anime-page_info .anime-page_content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.main .main_container .main_full .main_content .anime-page_info .anime-page_content .anime-page_title {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.main .main_container .main_full .main_content .anime-page_info .anime-page_content .anime-page_title h2 {
+  font-family: "Poppins";
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 135%;
+  color: #DA1414;
+}
+.main .main_container .main_full .main_content .anime-page_info .anime-page_content .anime-page_title p {
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 135%;
+  color: #9F9F9F;
+}
+.main .main_container .main_full .main_content .anime-page_info .anime-page_content .anime-page_title .anime-page_raiting {
+  display: flex;
+  padding: 5px 10px;
+  gap: 10px;
+  align-items: center;
+  background: var(--clr-reiting-bg);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.main .main_container .main_full .main_content .anime-page_info .anime-page_content .anime-page_title .anime-page_raiting p {
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 135%;
+  color: var(--clr-red-txt);
+}
+.main .main_container .main_full .main_content .anime-page_info .anime-page_content .anime-page_description p {
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 135%;
+  color: #404156;
+}
+.main .main_container .main_full .main_content .amime-page_scrin {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 30px 0;
+}
+.main .main_container .main_full .main_content .amime-page_scrin h3 {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 135%;
+  color: #DA1414;
+}
+.main .main_container .main_full .main_content .amime-page_scrin div {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+@media (max-width: 768px) {
+  .main .main_container .main_full .main_content .amime-page_scrin div {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.main .main_container .main_full .main_content .amime-page_scrin div img {
+  width: 100%;
+  display: block;
+  border-radius: 10px;
+  height: 150px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 :root {
@@ -467,6 +633,10 @@ body {
   font-size: 16px;
   line-height: 135%;
   color: var(--clr-red-txt);
+}
+.catd_rating img {
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 ._header {
@@ -678,6 +848,11 @@ body {
 }
 .main .main_container .main_full .main_sidebar {
   width: 100%;
+}
+@media (max-width: 940px) {
+  .main .main_container .main_full .main_sidebar .sidebar_news {
+    margin-top: 50px;
+  }
 }
 .main .main_container .main_full .main_sidebar .sidebar_news .news_cards {
   margin: 0 20px;

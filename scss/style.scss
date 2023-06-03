@@ -51,6 +51,7 @@ padding: 0 15px;
 @import"./register.scss";
 @import"./_login.scss";
 @import"./_profile.scss";
+@import"./anime-page.scss";
 //====================================================теми=======================================================================
 :root {
 
@@ -206,6 +207,9 @@ body{
         font-size: 16px;
         line-height: 135%;
         color:  var(--clr-red-txt);
+    }
+    img{
+        object-fit: contain;
     }
 }
 
@@ -425,7 +429,11 @@ body{
             }
             .main_sidebar {
                 width: 100%;
+
                 .sidebar_news {
+                    @media (max-width:940px) {
+                        margin-top: 50px;
+                    }
                     .news_cards {
                         margin: 0 20px;
                         display: flex;

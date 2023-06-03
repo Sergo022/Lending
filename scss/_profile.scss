@@ -1,6 +1,9 @@
 .main-settings{
     margin: 50px 0 20px 0;
     .main-settings_container {
+        @media (max-width:800px) {
+            flex-direction: column;
+        }
         display: flex;
         gap: 30px;
         .profile_settings {
