@@ -103,6 +103,7 @@ html[data-theme=dark] {
   z-index: -1;
 }
 .register_main .register_container div .reguster_form {
+  position: relative;
   margin: 140px 0;
   float: right;
   width: 100%;
