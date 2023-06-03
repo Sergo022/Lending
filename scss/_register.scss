@@ -37,7 +37,7 @@ html[data-theme="dark"] {
     .register_bj{ 
         position: absolute;
         width: 100%;
-        height: 100%;
+        height: 150%;
         top: 0;
         left: 0;
         img{
@@ -47,25 +47,20 @@ html[data-theme="dark"] {
             top: 0;
             left: 0;
             object-fit: cover;
+            z-index: -1;
         
         }
     }
     .register_container{
         div{
-            position: relative;
             .reguster_form {
-                @media (max-width:730px) {
-                    top: 160px;
-                }
                 @media (max-width:560px) {
                     padding: 30px;
                 }
+                margin: 140px 0;
+                float: right;
                 width: 100%;
-                right: 0;
-                top: 140px;
-                display: inline-block;
                 max-width: 540px;
-                position: absolute;
                 z-index: 10;
                 padding: 40px 95px 60px 95px;
                 background: var(--register-bg);
