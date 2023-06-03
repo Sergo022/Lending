@@ -26,13 +26,14 @@ html[data-theme="dark"] {
 }
 .main{
 }
-
+.register-body{
+    height: 100vh;
+}
 .header{
     z-index: 100;
 }
 .register_main {
-    height: 90.1vh;
-    position: relative;
+
     .register_bj{ 
         position: absolute;
         width: 100%;
