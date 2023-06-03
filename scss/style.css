@@ -121,10 +121,11 @@ body {
   background: #F6F6F6;
   border-radius: 10px;
 }
-.register_main .register_container .reguster_form .register_data .hide {
+.register_main .register_container .reguster_form .register_data .hidevis {
   right: 0;
   padding: 15px;
   position: absolute;
+  cursor: pointer;
 }
 .register_main .register_container .reguster_form .register_btn {
   width: 100%;
