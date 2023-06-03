@@ -1,3 +1,24 @@
+:root {
+--register-bg:rgba(255, 255, 255, 0.8);
+--register-tt:#404156;
+--input-bg:#F6F6F6;
+--register-btn:#DA1414;
+--google-btn:#fff;
+--register-txt:#404156;
+--register-txt-2:#FFFFFF;
+}
+
+html[data-theme="dark"] {
+    --register-bg:rgba(18, 18, 18, 0.8);
+    --register-tt:#9F9F9F;
+    --input-bg:#262626;
+    --register-btn:#DEDEDE;
+    --google-btn:#262626;
+    --register-txt:#DEDEDE;
+    --register-txt-2:#DEDEDE;
+
+}
+
 .regiter_profile_img{
     background: #F6F6F6;
     padding: 8px;
@@ -46,7 +67,7 @@
                 position: absolute;
                 z-index: 10;
                 padding: 40px 95px 60px 95px;
-                background: rgba(255, 255, 255, 0.8);
+                background: var(--register-bg);
                 backdrop-filter: blur(10px);
                 border-radius: 10px;
                 .register_title {
@@ -55,7 +76,7 @@
                     font-size: 38px;
                     line-height: 135%;
                     text-align: center;
-                    color: #404156;
+                    color: var(--register-tt);
                     margin-bottom: 20px;
                 }
                 .register_data{
@@ -68,7 +89,7 @@
                     input{
                         width: 100%;
                         padding: 20px 15px 20px 54px;
-                        background: #F6F6F6;
+                        background: var(--input-bg);
                         border-radius: 10px;
 
                     }
@@ -85,14 +106,14 @@
                     display: block;
                     text-align: center;
                     border-radius: 10px;
-                    background: #DA1414;
+                    background: var(--register-btn);
                     padding: 15px;
                     margin-bottom: 20px;
                         font-family: 'Poppins';
                         font-weight: 400;
                         font-size: 16px;
                         line-height: 135%;
-                        color: #FFFFFF;
+                        color: var(--google-btn);
                         cursor: pointer;
                 }
                 .register_description{
@@ -105,7 +126,15 @@
                         font-size: 12px;
                         line-height: 135%;
                         text-decoration-line: underline;
-                        color: #DA1414;
+                        color: var(--register-btn);
+                    }
+                    p{
+                        font-family: 'Poppins';
+                        font-weight: 400;
+                        font-size: 12px;
+                        line-height: 135%;
+                        color: var(--register-tt);
+
                     }
                 }
                 .btns_login{
@@ -131,12 +160,12 @@
                         }
                     }
                     .google{
-                        background-color: #fff;
-                        color: #404156;
+                        background-color: var(--google-btn);
+                        color:var(--register-txt);
                     }
                     .facebook{
                         background: #0053B5;
-                        color: #FFFFFF;
+                        color: var(--register-txt-2);
                     }
                 }
             }
