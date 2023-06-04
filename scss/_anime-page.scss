@@ -151,6 +151,21 @@
                         }
                     }
                 }
+                .anime-page_video{
+                    position: relative;
+                    padding: 0px 0px 54.5% 0px;
+                    margin-bottom: 50px;
+
+                    iframe{
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        top: 0;
+                        left: 0;
+                        object-fit: cover;
+                        border-radius: 10px;
+                    }
+                }
             }
         }
     }

@@ -30,26 +30,6 @@ function documentActions(e){
     }
 }
 
-//слайдер
-new Swiper('.swiper-container',{
-    navigation:{
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev'
-    },
-    slidesPerView: 3,
-    spaceBetween: 30,
-    breakpoints:{
-        320:{
-            slidesPerView: 1,
-        },
-        510:{
-            slidesPerView: 2,
-        },
-        1000:{
-            slidesPerView: 3,
-        },
-    }
-});
 
 
 //функції що показують/ховають пароль і задають іконці opsity
@@ -103,19 +83,6 @@ buttons.forEach((button) => {
   });
 });
 //==============================sceleton==========================================================
-const allSkeleton = document.querySelectorAll('.skeleton')
-window.addEventListener('load', function(){
-    allSkeleton.forEach(item=>{
-        item.classList.remove('skeleton')
-    })
-})
-
-const allSkeleton1 = document.querySelectorAll('.skeleton-1')
-window.addEventListener('load', function(){
-    allSkeleton1.forEach(item=>{
-        item.classList.remove('skeleton-1')
-    })
-})
 
 // const allSkeleton = document.querySelectorAll('.skeleton');
 // window.addEventListener('load', function() {
