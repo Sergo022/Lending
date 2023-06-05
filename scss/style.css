@@ -418,8 +418,19 @@ input:checked + .slider:before {
   grid-template-columns: 2.76fr 6fr;
   gap: 30px;
 }
+@media (max-width: 640px) {
+  .main .main_container .main_full .main_content .anime-page_info {
+    display: flex;
+    flex-direction: column;
+  }
+}
 .main .main_container .main_full .main_content .anime-page_info .anime-page_preview {
   position: relative;
+}
+@media (max-width: 640px) {
+  .main .main_container .main_full .main_content .anime-page_info .anime-page_preview {
+    max-width: 400px;
+  }
 }
 .main .main_container .main_full .main_content .anime-page_info .anime-page_preview .preview-img {
   -o-object-fit: cover;
@@ -514,6 +525,7 @@ input:checked + .slider:before {
 @media (max-width: 768px) {
   .main .main_container .main_full .main_content .amime-page_scrin div {
     grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
   }
 }
 .main .main_container .main_full .main_content .amime-page_scrin div img {
@@ -528,6 +540,7 @@ input:checked + .slider:before {
   position: relative;
   padding: 0px 0px 54.5% 0px;
   margin-bottom: 50px;
+  min-height: 360px;
 }
 .main .main_container .main_full .main_content .anime-page_video iframe {
   position: absolute;
@@ -538,6 +551,10 @@ input:checked + .slider:before {
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 10px;
+}
+
+#PlayList {
+  display: none;
 }
 
 :root {

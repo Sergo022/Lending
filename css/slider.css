@@ -136,4 +136,5 @@ Auto Height
 }
 .poster{
   object-fit: cover;
+  min-height: 350px;
 }
