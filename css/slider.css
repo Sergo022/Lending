@@ -111,9 +111,6 @@ Auto Height
   gap: 10px;
 }
 
-.swiper-button-prev, .swiper-button-next img{
-  padding: 5px;  
-}
 .swiper-slide {
   /* margin-right: 30px; */
   border-radius: 10px;

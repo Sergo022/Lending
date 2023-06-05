@@ -54,7 +54,8 @@ padding: 0 15px;
 @import"./anime-page.scss";
 //====================================================теми=======================================================================
 :root {
-
+    --svg:#fff;
+    --h-svg:#404156;
     --clr-body-bg: #F6F6F6;
     --clr-header: #fff;
     --clr-icon-bg: #DA1414;
@@ -75,7 +76,8 @@ padding: 0 15px;
 }
 
 html[data-theme="dark"] {
-
+    --svg: #262626;
+    --h-svg:#9F9F9F;
     --clr-body-bg: #121212;
     --clr-header: #262626;
     --clr-icon-bg: #DEDEDE;
@@ -313,9 +315,11 @@ body{
                 }
             }
             form{
-                img{
+                position: relative;
+                svg{
                     position: absolute;
-                    padding: 9.5px;
+                    top: 8px;
+                    left: 8px;
                 }
                 .header_search {
                     padding: 10px 10px 10px 38px;
@@ -330,6 +334,13 @@ body{
             display: flex;
             align-items: center;
             gap: 20px;
+            a{
+                img{
+                    height: 40px;
+                    width: 40px;
+                    border-radius: 50%;
+                }
+            }
             div{
                 cursor: pointer;
                 display: flex;
@@ -338,6 +349,9 @@ body{
                 .sun{
                     height: 20px;
                     width: 20px;
+                }
+                a{
+                    display: flex;
                 }
             }
         }
@@ -684,10 +698,21 @@ body{
     }
 }
 
-
-
-
-
+.h-svg path{
+    fill: var(--h-svg);
+}
+.svg path {
+    fill: var(--svg);
+}
+.svg{
+    width: 28px;
+    height: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--clr-icon-bg);
+    border-radius: 5px;
+}
 
 
 .footer {

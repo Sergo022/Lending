@@ -1,3 +1,10 @@
+:root {
+    --clr-subt:#404156;
+}
+
+html[data-theme="dark"] {
+    --clr-subt:#9F9F9F;
+}
 .main {
     .main_container {
         .main_full {
@@ -34,7 +41,7 @@
                         font-weight: 400;
                         font-size: 12px;
                         line-height: 135%;
-                        color: #DA1414;
+                        color: var(--clr-red-txt);
                     }
                 }
                 .anime-page_info {
@@ -63,7 +70,7 @@
                             right: 20px;
                             top: 20px;
                             z-index: 8;
-                            background: rgba(255, 255, 255, 0.8);
+                            background: var(--clr-reiting-bg);
                             backdrop-filter: blur(5px);
                             border-radius: 5px;
                             img{
@@ -84,7 +91,7 @@
                                 font-weight: 500;
                                 font-size: 24px;
                                 line-height: 135%;  
-                                color: #DA1414;
+                                color:var(--clr-red-txt);
                                 
                             }
                             p{
@@ -92,7 +99,7 @@
                                 font-weight: 400;
                                 font-size: 12px;
                                 line-height: 135%;
-                                color: #9F9F9F;
+                                color:var(--clr-subt) ;
                             }
                             .anime-page_raiting {
                                 display: flex;
@@ -123,7 +130,7 @@
                                 font-weight: 400;
                                 font-size: 16px;
                                 line-height: 135%;  
-                                color: #404156;
+                                color: var(--clr-subt);
                                 
                             }
                         }
@@ -140,7 +147,7 @@
                         font-weight: 500;
                         font-size: 16px;
                         line-height: 135%;
-                        color: #DA1414;
+                        color: var(--clr-red-txt);
                     }
                     div{
                         display: grid;
@@ -181,9 +188,6 @@
     }
 }
 
-#PlayList {
-display: none;
-}
 
 
 

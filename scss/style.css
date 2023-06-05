@@ -378,6 +378,14 @@ input:checked + .slider:before {
   transform: translateX(19px);
 }
 
+:root {
+  --clr-subt:#404156;
+}
+
+html[data-theme=dark] {
+  --clr-subt:#9F9F9F;
+}
+
 .main .main_container .main_full .main_content .anime-page_header {
   justify-content: space-between;
   background: var(--clr-header);
@@ -411,7 +419,7 @@ input:checked + .slider:before {
   font-weight: 400;
   font-size: 12px;
   line-height: 135%;
-  color: #DA1414;
+  color: var(--clr-red-txt);
 }
 .main .main_container .main_full .main_content .anime-page_info {
   display: grid;
@@ -446,7 +454,7 @@ input:checked + .slider:before {
   right: 20px;
   top: 20px;
   z-index: 8;
-  background: rgba(255, 255, 255, 0.8);
+  background: var(--clr-reiting-bg);
   -webkit-backdrop-filter: blur(5px);
           backdrop-filter: blur(5px);
   border-radius: 5px;
@@ -469,14 +477,14 @@ input:checked + .slider:before {
   font-weight: 500;
   font-size: 24px;
   line-height: 135%;
-  color: #DA1414;
+  color: var(--clr-red-txt);
 }
 .main .main_container .main_full .main_content .anime-page_info .anime-page_content .anime-page_title p {
   font-family: "Poppins";
   font-weight: 400;
   font-size: 12px;
   line-height: 135%;
-  color: #9F9F9F;
+  color: var(--clr-subt);
 }
 .main .main_container .main_full .main_content .anime-page_info .anime-page_content .anime-page_title .anime-page_raiting {
   display: flex;
@@ -501,7 +509,7 @@ input:checked + .slider:before {
   font-weight: 400;
   font-size: 16px;
   line-height: 135%;
-  color: #404156;
+  color: var(--clr-subt);
 }
 .main .main_container .main_full .main_content .amime-page_scrin {
   display: flex;
@@ -515,7 +523,7 @@ input:checked + .slider:before {
   font-weight: 500;
   font-size: 16px;
   line-height: 135%;
-  color: #DA1414;
+  color: var(--clr-red-txt);
 }
 .main .main_container .main_full .main_content .amime-page_scrin div {
   display: grid;
@@ -553,11 +561,9 @@ input:checked + .slider:before {
   border-radius: 10px;
 }
 
-#PlayList {
-  display: none;
-}
-
 :root {
+  --svg:#fff;
+  --h-svg:#404156;
   --clr-body-bg: #F6F6F6;
   --clr-header: #fff;
   --clr-icon-bg: #DA1414;
@@ -576,6 +582,8 @@ input:checked + .slider:before {
 }
 
 html[data-theme=dark] {
+  --svg: #262626;
+  --h-svg:#9F9F9F;
   --clr-body-bg: #121212;
   --clr-header: #262626;
   --clr-icon-bg: #DEDEDE;
@@ -828,9 +836,13 @@ body {
 .header .header_container .mb_burger nav ul li a:hover {
   color: #DA1414;
 }
-.header .header_container .mb_burger form img {
+.header .header_container .mb_burger form {
+  position: relative;
+}
+.header .header_container .mb_burger form svg {
   position: absolute;
-  padding: 9.5px;
+  top: 8px;
+  left: 8px;
 }
 .header .header_container .mb_burger form .header_search {
   padding: 10px 10px 10px 38px;
@@ -842,6 +854,11 @@ body {
   align-items: center;
   gap: 20px;
 }
+.header .header_container .header_profile a img {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+}
 .header .header_container .header_profile div {
   cursor: pointer;
   display: flex;
@@ -851,6 +868,9 @@ body {
 .header .header_container .header_profile div .sun {
   height: 20px;
   width: 20px;
+}
+.header .header_container .header_profile div a {
+  display: flex;
 }
 .header .header_container .category {
   display: none;
@@ -1184,6 +1204,24 @@ body {
     background-position: 100% 0;
   }
 }
+.h-svg path {
+  fill: var(--h-svg);
+}
+
+.svg path {
+  fill: var(--svg);
+}
+
+.svg {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--clr-icon-bg);
+  border-radius: 5px;
+}
+
 .footer {
   padding: 50px 0;
   background-color: var(--clr-header);
