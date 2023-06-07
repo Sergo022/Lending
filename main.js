@@ -82,27 +82,6 @@ buttons.forEach((button) => {
       }
   });
 });
-//==============================sceleton==========================================================
-
-// const allSkeleton = document.querySelectorAll('.skeleton');
-// window.addEventListener('load', function() {
-//   setTimeout(function() {
-//     allSkeleton.forEach(item => {
-//       item.classList.remove('skeleton');
-//     });
-//   }, 1000);
-// });
-
-// const allSkeleton1 = document.querySelectorAll('.skeleton-1');
-// window.addEventListener('load', function() {
-//   setTimeout(function() {
-//     allSkeleton1.forEach(item => {
-//       item.classList.remove('skeleton-1');
-//     });
-//   }, 1000);
-// });
-//===========================================================================================
-
 
 // Отримуємо посилання на SVG-елемент
 var svgElement = document.querySelector('.heart');
@@ -111,3 +90,5 @@ var svgElement = document.querySelector('.heart');
 svgElement.addEventListener('click', function() {
   svgElement.classList.toggle('active'); // Додати або видалити клас 'active'
 });
+
+

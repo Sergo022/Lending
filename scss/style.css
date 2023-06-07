@@ -271,6 +271,13 @@ html[data-theme=dark] {
     flex-direction: column;
   }
 }
+.main-settings .main-settings_container .item-tabs {
+  display: none;
+  width: 100%;
+}
+.main-settings .main-settings_container .item-tabs.active {
+  display: block;
+}
 .main-settings .main-settings_container .profile_settings {
   min-width: 255px;
 }
@@ -280,7 +287,7 @@ html[data-theme=dark] {
   gap: 20px;
   padding: 20px;
 }
-.main-settings .main-settings_container .profile_settings ul li {
+.main-settings .main-settings_container .profile_settings ul button {
   display: flex;
   font-family: "Poppins";
   font-weight: 400;
@@ -289,12 +296,13 @@ html[data-theme=dark] {
   color: var(--li);
   background: inherit;
   position: relative;
+  cursor: pointer;
 }
-.main-settings .main-settings_container .profile_settings ul li.active {
+.main-settings .main-settings_container .profile_settings ul button.active {
   color: var(--li-active);
   padding-left: 15px;
 }
-.main-settings .main-settings_container .profile_settings ul li.active::after {
+.main-settings .main-settings_container .profile_settings ul button.active::after {
   position: absolute;
   top: 8px;
   left: 0;
@@ -325,6 +333,166 @@ html[data-theme=dark] {
   line-height: 135%;
   color: var(--li);
 }
+.main-settings .main-settings_container .profile_security-privacy {
+  width: 100%;
+}
+.main-settings .main-settings_container .profile_security-privacy .profile-prof .profile_info {
+  display: flex;
+  gap: 30px;
+  position: relative;
+}
+.main-settings .main-settings_container .profile_security-privacy .profile-prof .profile_info img {
+  max-width: 160px;
+  max-height: 160px;
+  border-radius: 50%;
+}
+.main-settings .main-settings_container .profile_security-privacy .profile-prof .profile_info .change-photo {
+  opacity: 0;
+  position: absolute;
+  left: 50px;
+  top: 47px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+.main-settings .main-settings_container .profile_security-privacy .profile-prof .profile_info .change-photo:hover {
+  opacity: 1;
+}
+.main-settings .main-settings_container .profile_security-privacy .profile-prof .profile_info .change-photo:hover .pro {
+  opacity: 0.7;
+}
+.main-settings .main-settings_container .profile_security-privacy .profile-prof .profile_info div .profile_name {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.main-settings .main-settings_container .profile_security-privacy .profile-prof .profile_info div .profile_name h2 {
+  font-family: "Poppins";
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 135%;
+  color: #DA1414;
+}
+.main-settings .main-settings_container .profile_security-privacy .profile-prof .profile_info div .profile_name div {
+  height: 25px;
+  width: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #FBD0D0;
+  border-radius: 5px;
+}
+.main-settings .main-settings_container .profile_security-privacy .profile-prof .profile_info div .profile_pravecy {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+.main-settings .main-settings_container .profile_security-privacy .profile-prof .profile_info div .profile_pravecy a {
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 135%;
+  color: #9F9F9F;
+  transition: all 0.3s ease 0s;
+}
+.main-settings .main-settings_container .profile_security-privacy .profile-prof .profile_info div .profile_pravecy a:hover {
+  color: #DA1414;
+}
+.main-settings .main-settings_container .profile_security-privacy .profile_sessions .sessions_header {
+  margin-bottom: 20px;
+  margin-top: 50px;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 4px rgba(230, 230, 230, 0.25);
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+.main-settings .main-settings_container .profile_security-privacy .profile_sessions .sessions_header .header_left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.main-settings .main-settings_container .profile_security-privacy .profile_sessions .sessions_header .header_left h2 {
+  font-family: "Poppins";
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 135%;
+  color: #DA1414;
+}
+.main-settings .main-settings_container .profile_security-privacy .profile_sessions .sessions_header .filtr {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.main-settings .main-settings_container .profile_security-privacy .profile_sessions .sessions_header .filtr p {
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 135%;
+  color: #DA1414;
+}
+.main-settings .main-settings_container .profile_security-privacy .profile_sessions .full-session {
+  display: flex;
+  border-radius: 10px;
+  box-shadow: 0px 4px 4px rgba(230, 230, 230, 0.25);
+}
+.main-settings .main-settings_container .profile_security-privacy .profile_sessions .full-session .profile_session {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  padding: 40px 30px;
+  background: #FCFCFC;
+}
+.main-settings .main-settings_container .profile_security-privacy .profile_sessions .full-session .profile_session .session_imfo {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.main-settings .main-settings_container .profile_security-privacy .profile_sessions .full-session .profile_session .session_imfo h3 {
+  margin-bottom: 5px;
+  font-family: "Poppins";
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 135%;
+  color: #DA1414;
+}
+.main-settings .main-settings_container .profile_security-privacy .profile_sessions .full-session .profile_session .session_imfo h2 {
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 135%;
+  color: #404156;
+}
+.main-settings .main-settings_container .profile_security-privacy .profile_sessions .full-session .profile_session p {
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 135%;
+  text-align: center;
+  color: #9F9F9F;
+}
+.main-settings .main-settings_container .profile_security-privacy .profile_sessions .full-session .profile_session h3 {
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 135%;
+  text-align: center;
+  color: #CA3000;
+}
+.main-settings .main-settings_container .profile_security-privacy .profile_sessions .full-session .delet {
+  background: #FBD0D0;
+  width: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
 .switch {
   position: relative;
   display: inline-block;
