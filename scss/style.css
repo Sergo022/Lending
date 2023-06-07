@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Ubuntu:wght@300&display=swap");
 *,
 *::before,
@@ -380,10 +381,22 @@ input:checked + .slider:before {
 
 :root {
   --clr-subt:#404156;
+  --area-bg:#FCFCFC;
+  --btn-bg:#DA1414;
+  --coment-txt:#DA1414;
+  --btn-color:#FFFFFF;
+  --btn-bg-hov-txt:#DA1414;
+  --heart-clr:#DA1414;
 }
 
 html[data-theme=dark] {
   --clr-subt:#9F9F9F;
+  --area-bg:#1B1B1B;
+  --btn-bg:#262626;
+  --btn-color:#DEDEDE;
+  --btn-bg-hov-txt: #1B1B1B;
+  --coment-txt:#DEDEDE;
+  --heart-clr:#DEDEDE;
 }
 
 .main .main_container .main_full .main_content .anime-page_header {
@@ -420,6 +433,7 @@ html[data-theme=dark] {
   font-size: 12px;
   line-height: 135%;
   color: var(--clr-red-txt);
+  cursor: pointer;
 }
 .main .main_container .main_full .main_content .anime-page_info {
   display: grid;
@@ -450,6 +464,11 @@ html[data-theme=dark] {
   width: 100%;
 }
 .main .main_container .main_full .main_content .anime-page_info .anime-page_preview .anime-like {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
   position: absolute;
   right: 20px;
   top: 20px;
@@ -458,9 +477,13 @@ html[data-theme=dark] {
   -webkit-backdrop-filter: blur(5px);
           backdrop-filter: blur(5px);
   border-radius: 5px;
+  cursor: pointer;
 }
-.main .main_container .main_full .main_content .anime-page_info .anime-page_preview .anime-like img {
-  padding: 8px;
+.main .main_container .main_full .main_content .anime-page_info .anime-page_preview .anime-like .active path {
+  fill: var(--heart-clr); /* Колір заливки при активному стані */
+}
+.main .main_container .main_full .main_content .anime-page_info .anime-page_preview .anime-like path {
+  stroke: var(--heart-clr); /* Колір заливки при активному стані */
 }
 .main .main_container .main_full .main_content .anime-page_info .anime-page_content {
   display: flex;
@@ -559,6 +582,120 @@ html[data-theme=dark] {
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 10px;
+}
+.main .main_container .main_full .main_content .anime-page_coments {
+  margin-top: 50px;
+  margin-bottom: 70px;
+}
+.main .main_container .main_full .main_content .anime-page_coments .coment-textarea textarea {
+  resize: none;
+  width: 100%;
+  height: 100px;
+  background: var(--area-bg);
+  box-shadow: 0px 4px 4px rgba(230, 230, 230, 0.25);
+  border-radius: 10px;
+  font-family: "Poppins";
+  padding: 20px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 135%;
+  color: #9F9F9F;
+}
+.main .main_container .main_full .main_content .anime-page_coments .coment-textarea button {
+  background: var(--btn-bg);
+  border-radius: 10px;
+  padding: 8px 24px;
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 135%;
+  text-align: center;
+  color: var(--btn-color);
+  display: flex;
+  margin-left: auto;
+  margin-top: 10px;
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+}
+.main .main_container .main_full .main_content .anime-page_coments .coment-textarea button:hover {
+  color: var(--btn-bg-hov-txt);
+  background: #FFFFFF;
+}
+.main .main_container .main_full .main_content .anime-page_coments .human-coment {
+  margin-top: 20px;
+  display: flex;
+  gap: 30px;
+}
+@media (max-width: 425px) {
+  .main .main_container .main_full .main_content .anime-page_coments .human-coment .coment_img {
+    position: absolute;
+  }
+}
+.main .main_container .main_full .main_content .anime-page_coments .human-coment .coment_img img {
+  height: 65px;
+  width: 65px;
+  border-radius: 50%;
+}
+@media (max-width: 425px) {
+  .main .main_container .main_full .main_content .anime-page_coments .human-coment .coment_img img {
+    height: 40px;
+    width: 40px;
+  }
+}
+.main .main_container .main_full .main_content .anime-page_coments .human-coment .coment_info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+@media (max-width: 425px) {
+  .main .main_container .main_full .main_content .anime-page_coments .human-coment .coment_info .info_title {
+    margin-left: 55px;
+  }
+}
+.main .main_container .main_full .main_content .anime-page_coments .human-coment .coment_info .info_title h2 {
+  font-family: "Poppins";
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 135%;
+  color: var(--coment-txt);
+}
+.main .main_container .main_full .main_content .anime-page_coments .human-coment .coment_info .info_title p {
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 135%;
+  color: #9F9F9F;
+}
+.main .main_container .main_full .main_content .anime-page_coments .human-coment .coment_info .info_txt {
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 135%;
+  color: var(--clr-subt);
+}
+.main .main_container .main_full .main_content .anime-page_coments .human-coment .coment_info .info_last {
+  display: flex;
+  gap: 20px;
+}
+.main .main_container .main_full .main_content .anime-page_coments .human-coment .coment_info .info_last div {
+  display: flex;
+  gap: 5px;
+  cursor: pointer;
+}
+.main .main_container .main_full .main_content .anime-page_coments .human-coment .coment_info .info_last div p {
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 135%;
+  color: #DA1414;
+}
+.main .main_container .main_full .main_content .anime-page_coments .human-coment .coment_info .info_last h4 {
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 135%;
+  color: #9F9F9F;
+  cursor: pointer;
 }
 
 :root {

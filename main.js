@@ -104,3 +104,10 @@ buttons.forEach((button) => {
 //===========================================================================================
 
 
+// Отримуємо посилання на SVG-елемент
+var svgElement = document.querySelector('.heart');
+
+// Додаємо обробник події для натискання
+svgElement.addEventListener('click', function() {
+  svgElement.classList.toggle('active'); // Додати або видалити клас 'active'
+});
