@@ -7,6 +7,13 @@
 --slider-circle-before:white;
 --slider-circle-before-chek:white;
 --slider-bg:#DA1414;
+--sessin-hed:#ffff;
+ --svg-bg:#FBD0D0;
+--delet-bj:#FBD0D0;
+--rd-tt:#DA1414;
+--sv:#DA1414;
+--privacy:#DA1414;
+// --social-hov:
 }
 
 
@@ -19,6 +26,16 @@ html[data-theme="dark"] {
     --slider-circle-before:#727272;
     --slider-circle-before-chek:#262626;;
     --slider-bg:#9F9F9F;
+    --sessin-hed:#262626;
+    --delet-bj:#262626;
+    --rd-tt:#DEDEDE;
+    --svg-bg:#727272;
+    --sv:#ffff;
+    --privacy:#DEDEDE;
+}
+
+.sv path {
+  fill: var(--sv);
 }
 .main-settings{
     margin: 50px 0 20px 0;
@@ -98,7 +115,7 @@ html[data-theme="dark"] {
                 }
             }
         }
-        .profile_security-privacy {
+        .profile_security-privacy,.profile_anime-list {
           width: 100%;
           .profile-prof {
             .profile_info {
@@ -106,6 +123,10 @@ html[data-theme="dark"] {
               gap: 30px;
               position: relative;
               img{
+                @media (max-width:425px) {
+                  max-width: 95px;
+                  max-height: 95px;
+                }
                 max-width: 160px;
                 max-height: 160px;
                 border-radius: 50%;
@@ -137,20 +158,39 @@ html[data-theme="dark"] {
                     font-weight: 500;
                     font-size: 24px;
                     line-height: 135%;                  
-                    color: #DA1414;
+                    color: var(--li-active);
                   }
                   div{
+                    cursor: pointer;
                     height: 25px;
                     width: 25px;
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    background: #FBD0D0;
+                    background: var(--svg-bg);
                     border-radius: 5px;
                     svg{
 
                     }
                   }
+                }
+                .social.profile_pravecy{
+                  display: flex;
+                  align-items: center;
+                  gap: 10px;
+                  margin-bottom: 15px;
+                  a{
+                    font-family: 'Poppins';
+                    font-weight: 400;
+                    font-size: 12px;
+                    line-height: 135%;
+                    color: #9F9F9F;
+                     transition: all 0.3s ease 0s;
+                    &:hover{
+                      color: #1DA1F2;
+                    }
+                  }
+
                 }
                 .profile_pravecy{
                   display: flex;
@@ -168,7 +208,7 @@ html[data-theme="dark"] {
                     color: #9F9F9F;
                      transition: all 0.3s ease 0s;
                     &:hover{
-                      color: #DA1414;
+                      color: var(--privacy);
                     }
                   }
                 }
@@ -181,7 +221,7 @@ html[data-theme="dark"] {
             .sessions_header { 
               margin-bottom: 20px;
               margin-top: 50px;
-              background: #FFFFFF;
+              background: var(--sessin-hed);
               box-shadow: 0px 4px 4px rgba(230, 230, 230, 0.25);
               border-radius: 10px;  
               display: flex; 
@@ -197,10 +237,11 @@ html[data-theme="dark"] {
                   font-weight: 500;
                   font-size: 18px;
                   line-height: 135%;
-                  color: #DA1414;
+                  color: var(--li-active);
                 }
               }
               .filtr {
+                cursor: pointer;
                 display: flex;
                 align-items: center;
                 gap: 5px;
@@ -209,7 +250,7 @@ html[data-theme="dark"] {
                   font-weight: 400;
                   font-size: 12px;
                   line-height: 135%;
-                  color: #DA1414;
+                  color: var(--li-active);
 
                 }
               }
@@ -217,7 +258,28 @@ html[data-theme="dark"] {
             .full-session{
               display: flex;
               border-radius: 10px;
-              box-shadow: 0px 4px 4px rgba(230, 230, 230, 0.25);
+              .profile_session.anime-list{
+                flex: 1;
+                display: flex;
+                align-items: center;
+                gap: 30px;
+                background:var(--notification-bg);
+                padding: 0;
+                justify-content: normal;
+                @media (max-width:425px) {
+                  padding: 10px;
+                  align-items: center;
+                  justify-content: center;
+                  gap: 10px;
+                }
+                img{
+                  @media (max-width:425px) {
+                    max-width: 100%;
+                    max-height: 193px;
+                  }
+                  max-width: 95px;
+                }
+              }
               .profile_session {
                 flex: 1;
                 display: flex;
@@ -225,7 +287,16 @@ html[data-theme="dark"] {
                 align-items: center;
                 gap: 30px;
                 padding: 40px 30px;
-                background: #FCFCFC;
+                background:var(--notification-bg);
+              
+                @media (max-width:420px) {
+                  flex-wrap: wrap;
+                }
+                svg{
+                  @media (max-width:625px) {
+                    display: none;
+                  }
+                }
                 .session_imfo {
                   display: flex;
                   align-items: flex-start;
@@ -236,14 +307,14 @@ html[data-theme="dark"] {
                     font-weight: 500;
                     font-size: 16px;
                     line-height: 135%;
-                    color: #DA1414;
+                    color:var(--li-active);
                   }
                   h2{
                     font-family: 'Poppins';
                     font-weight: 400;
                     font-size: 12px;
                     line-height: 135%;  
-                    color: #404156;                  
+                    color: var(--li);                  
                   }
                 }
                 p{
@@ -255,7 +326,10 @@ html[data-theme="dark"] {
                   color: #9F9F9F;
                   
                 }
-                h3{
+                .current{
+                  @media (max-width:530px) {
+                    display: none;
+                  }
                   font-family: 'Poppins';
                   font-weight: 400;
                   font-size: 12px;
@@ -266,7 +340,7 @@ html[data-theme="dark"] {
               
               }
               .delet {
-                background: #FBD0D0;   
+                background:var(--delet-bj);   
                 width: 65px; 
                 display: flex;
                 align-items: center;
